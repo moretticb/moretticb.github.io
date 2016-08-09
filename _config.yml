@@ -1,8 +1,8 @@
 # Site wide configuration
 
-title: Site Title
+title: Moretti CB
 locale: en_US
-description: Describe your website here.
+description: Moretti CB personal website and blog.
 logo: site-logo.png
 search: true
 url: //moretticb.github.io
@@ -36,22 +36,22 @@ exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.
 
 # Site owner
 owner:
-  name: Your Name
-  avatar: bio-photo.jpg
-  email: you@email.com
-  disqus-shortname:
+  name: Caio Benatti Moreti
+  avatar: caio-bio.png
+  email: caiodba@gmail.com
+  disqus-shortname: moretticb
   twitter: #username
   facebook: #username
-  github: #username
+  github: moretticb
   stackexchange: #http://stackoverflow.com/users/123456/username
-  linkedin: #username
+  linkedin: moretticb
   instagram: #username
   flickr: #username
   tumblr: #username
   pinterest: #username
   weibo: #userid
   google:
-    plus: #username
+    plus: caiodba
     analytics:
     verify:
     ad-client:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Sample Link Post"
+author: caio
 excerpt: "Example and code for using link posts."
 categories: articles
 tags: [sample-post, link-post]

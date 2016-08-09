@@ -10,6 +10,16 @@ billy_rick:
   google:
     plus: BillyRick
 
+caio:
+  name: Caio Benatti Moretti
+  web: http://www.moretticb.com
+  email: caiodba@gmail.com
+  bio: "A bit brusher, perhaps."
+  avatar: bio-caio.png
+  google:
+    plus: caiodba
+
+
 cornelius_fiddlebone:
   name: Cornelius Fiddlebone
   email: cornelius@thewhip.com

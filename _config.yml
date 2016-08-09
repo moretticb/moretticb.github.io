@@ -1,8 +1,8 @@
 # Site wide configuration
 
-title: Moretti CB
+title: Caio Benatti Moretti
 locale: en_US
-description: Moretti CB personal website and blog.
+description: A bit brusher, perhaps.
 logo: site-logo.png
 search: true
 url: //moretticb.github.io

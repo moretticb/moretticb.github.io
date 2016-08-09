@@ -3,6 +3,7 @@ layout: post
 title: "MathJax Example"
 modified:
 categories: blog
+author: billy_rick
 excerpt:
 tags: []
 image:

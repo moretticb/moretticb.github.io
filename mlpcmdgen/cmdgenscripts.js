@@ -2,7 +2,6 @@ var selTab = "topoTab";
 var topology;
 
 window.onload = function(){
-	
 	var randomSizes = [];
 	var randomLen = 3+Math.round(Math.random());
 	for(var i=0;i<randomLen;i++)
@@ -18,6 +17,10 @@ window.onresize = function(){
 	topo.style.width = vp.offsetWidth+"px";
 	topo.style.height = (vp.offsetWidth/2)+"px";
 	document.getElementById('cmdContent').style.height = (vp.offsetWidth/2)+"px";
+	if(window.frameElement){
+		window.frameElement.style.height = (topo.offsetHeight+20+document.getElementById('panel').offsetHeight)+"px";
+	}
+	
 }
 
 window.onhashchange = function(){

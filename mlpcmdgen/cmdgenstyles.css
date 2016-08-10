@@ -1,0 +1,423 @@
+html {
+	margin: 0px 0px 0px 0px;
+}
+
+body {
+	text-align: center;
+	margin: 0px 0px 0px 0px;
+}
+
+.preview{
+	display: inline-block;
+	width: 600px;
+	height: 300px;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	letter-spacing: -2px;
+	font-weight: bold;
+	/*background-color: #00F;*/
+}
+
+.nlayer4, .nlayer3, .nlayer2, .nlayer1, .ilayer4, .ilayer3, .ilayer2, .ilayer1, .arrow1, .arrow2, .arrow3, .arrow4{
+	display: inline-block;
+	position: relative; z-index: 1;
+	top: 0%;
+	margin-left: -0.714%;
+	height: 100%;
+	width: 9.857%;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.nlayer4, .nlayer3, .nlayer2, .nlayer1{ background-image: url('neuralLayerSprite.png'); }
+.ilayer4, .ilayer3, .ilayer2, .ilayer1{ background-image: url('inputLayerSprite.png'); text-align: right;}
+.arrow1, .arrow2, .arrow3, .arrow4{ background-image: url('outputArrowsSprite.png'); z-index: 0 !important;}
+.nlayer4,.ilayer4,.arrow4{ background-position: 0px 0px; }
+.nlayer3,.ilayer3,.arrow3{ background-position: 33% 0%; }
+.nlayer2,.ilayer2,.arrow2{ background-position: 66.5% 0%; }
+.nlayer1,.ilayer1,.arrow1{ background-position: 100% 0%; }
+
+.bias {
+	display: inline-block;
+	position: relative;
+	top: 0.2%;
+	left: 30%;
+	width: 20%;
+	height: 8%;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.x1, .x2, .x3, .x4 {
+	display: inline-block;
+	position: relative;
+	top: 0px;
+	width: 92%;
+	height: 10%;
+	text-align: center;
+	line-height: 0%;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	text-align: right;
+	padding-right: 8%;
+}
+.ilayer1 .x1 { top: 59%;}
+
+.ilayer2 .x1 { top: 47%;}
+.ilayer2 .x2 { top: 73%; left: -100%;}
+
+.ilayer3 .x1 { top: 33%;}
+.ilayer3 .x2 { top: 60.5%; left: -100%;}
+.ilayer3 .x3 { top: 87%; left: -200%;}
+
+.ilayer4 .x1 { top: 25%;}
+.ilayer4 .x2 { top: 52%; left: -100%;}
+.ilayer4 .x4 { top: 89.5%; left: -200%;}
+
+.n1, .n2, .n3, .n4 {
+	display: inline-block;
+	position: relative;
+	top: 0px;
+	width: 100%;
+	height: 20%;
+	text-align: center;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+	color: #E7C7AC;
+}
+
+.n1:after, .n2:after, .n3:after, .n4:after {
+	content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.nlayer1 .n1 { top: 45.75%;}
+
+.nlayer2 .n1 { top: 32.5%;}
+.nlayer2 .n2 { top: 59.25%; left: -100%;}
+
+.nlayer3 .n1 { top: 19%;}
+.nlayer3 .n2 { top: 45.75%; left: -100%;}
+.nlayer3 .n3 { top: 72.55%; left: -200%;}
+
+.nlayer4 .n1 { top: 14%;}
+.nlayer4 .n2 { top: 40.5%; left: -100%;}
+.nlayer4 .n3 { top: 65%; left: -200%;}
+.nlayer4 .n4 { top: 78%; left: -200%;}
+
+.w11,.w12,.w13,.w14,.w21,.w22,.w23,.w24,.w31,.w32,.w33,.w34,.w41,.w42,.w43,.w44{
+	display: inline-block;
+	position: relative;
+	top: 0%;
+	margin-left: -4.7143%;
+	z-index: 0;
+	height: 100%;
+	width: 22.2857%;
+	height: 100%;
+	background-image: url('weightSprite.png');
+	background-size: auto 400%;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+.w44 {background-position: 0% 0%; }
+.w34 {background-position: 33.33% 0%; }
+.w24 {background-position: 66.66% 0%; }
+.w14 {background-position: 100% 0%; }
+
+.w43 {background-position: 0% 33.4%; }
+.w33 {background-position: 33.33% 33.4%; }
+.w23 {background-position: 66.66% 33.4%; }
+.w13 {background-position: 100% 33.4%; }
+
+.w42 {background-position: 0% 66.67%; }
+.w32 {background-position: 33.33% 66.67%; }
+.w22 {background-position: 66.66% 66.67%; }
+.w12 {background-position: 100% 66.67%; }
+
+.w41 {background-position: 0px 100%; }
+.w31 {background-position: 33.33% 100%; }
+.w21 {background-position: 66.66% 100%; }
+.w11 {background-position: 100% 100%; }
+
+.cmd {
+	display: block;
+	width: 100%;
+	background-color: #000;
+	color: #FFF;
+	text-align: left;
+	font-family: "Courier New";
+}
+
+.cmd p{
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.prompt {
+	color: #0f0;
+}
+
+.previewViewport {
+	float:left;
+	clear: left;
+	display: inline-block;
+	max-width: 700px;
+	min-width: 455px;
+	width: 100%;
+	background-color: #EFEFEF;
+	text-align: center;
+}
+
+.viewportTabs {
+	float:left;
+	clear: left;
+	display: inline-block;
+	max-width: 700px;
+	min-width: 455px;
+	width: 100%;
+	height: 20px;
+	background-color: #333;
+	overflow: hidden;
+}
+
+.tabLeft, .tabRight {
+	display: inline-block;
+	width: 7px;
+	height: 14px;
+	background-image: url('./tabRoundedSpr.png');
+	background-repeat: no-repeat;
+	background-size: auto 20px;
+}
+
+.tabLeft { background-position: top left; }
+.tabRight { background-position: top right; }
+
+
+.viewportTabs .tabSel, .viewportTabs .tabIdle {
+	display: inline-block;
+	margin-top: 2px;
+	font-variant: small-caps;
+	float: left;
+	height: 18px;
+}
+
+.viewportTabs .tabSel {
+	background-color: #EFEFEF;
+	font-weight: bold;
+	position: relative;
+	top: 3px;
+	cursor: default;
+}
+
+.viewportTabs .tabIdle {
+	background-color: #CCC !important;
+	color: #000 !important;
+	cursor: pointer;
+}
+
+.viewportTabs .tabIdle:hover {
+	background-color: #DDD;
+}
+
+.viewportTabs .txt {
+	color: #CCC;
+	font-size: 11px;
+	line-height: 20px;
+	padding-right: 5px;
+	float: right;
+}
+
+.viewportTabs .txt a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.viewportTabs .txt a:hover {
+	color: #FFF;
+	text-decoration: underline;
+}
+
+.panel {
+	float: left;
+	clear: left;
+	display: inline-block;
+	background-color: #333;
+	color: #FFF;
+	max-width: 700px;
+	min-width: 455px;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+.layerAdjust {
+	display: inline-block;
+	/*background-color: #0f0;*/
+	width: 25%;
+	height: 159px;
+	position: relative;
+	top: -9px;
+	background-image: url('./balaospr.png');
+	background-size: 41px auto;
+	background-position: 0% 100%;
+	background-repeat: repeat-x;
+	text-align: center;
+	margin-right: 2%;
+	overflow: hidden;
+	font-variant: small-caps;
+	letter-spacing: -1px;
+}
+
+.layerAdjust .middle{
+	display: inline-block;
+	/*background-color: #00f;*/
+	width: 32px;
+	height: 100%;
+	background-image: inherit;
+	background-repeat: no-repeat;
+	background-size: inherit;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+.layerAdjust .leftNormal , .layerAdjust .rightNormal,.layerAdjust .leftHole , .layerAdjust .rightHole {
+	display: inline-block;
+	/*background-color: #f00;*/
+	width: 20px;
+	height: 100%;
+	background-image: url('./balaospr.png');
+	background-size: inherit;
+	background-repeat: no-repeat;
+}
+
+.layerAdjust .leftNormal { float:left; background-position: left -321px;}
+.layerAdjust .rightNormal { float:right; background-position: right -321px;}
+
+.layerAdjust .leftHole { float:left; background-position: left -161px;}
+.layerAdjust .rightHole { float:right; background-position: right -161px; overflow: visible; white-space: nowrap;}
+
+.removeBtn, .activationBtn {
+	display: inline-block;
+	background-image: url('./deleteActivationSpr.png');
+	background-repeat: no-repeat;
+	background-size: auto 40px;
+	height: 20px;
+	margin-top: 135px;
+	position: absolute;
+	z-index: 3;
+}
+
+.removeBtn { background-position: 0px 0px; width: 20px; margin-left: -8px;}
+.activationBtn { background-position: -20px 0px; position: relative; left: -7px; width: 29px; cursor: not-allowed; }
+
+.removeBtn:hover {
+	background-position: 0px -20px;
+	cursor: pointer;
+}
+
+.swapBtnContainer {
+	display: inline;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	z-index: 3;
+	margin: 0% 0% 0% -0.7%;
+}
+
+.swapBtn, .plusBtn {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	/*background-color: #0f0;*/
+	background-image: url('./swapPlusSpr.png');
+	background-repeat: no-repeat;
+	background-size: auto 60px;
+	position: relative;
+	top: 55px;
+	left: -15px;
+}
+
+.swapBtn { background-position: left top; }
+.swapBtn:hover { background-position: right top; cursor: pointer; }
+.plusBtn { background-position: left bottom; }
+.plusBtn:hover { background-position: right bottom; cursor: pointer; }
+
+.layerAdjustMiddle {
+	display: inline-block;
+	width: 100%;
+	height: 149px;
+	/*background-color: #0f0;*/
+	position: absolute;
+	z-index: 2;
+	margin-left: -40%;
+	margin-top: 11px;
+}
+
+.up, .down, .upDown, .downDown {
+	display: inline-block;
+	width: 36px;
+	height: 20px;
+	background-image: url('./updown.png');
+	background-repeat: no-repeat;
+	background-size: auto 40px;
+}
+
+.up { background-position: left top; }
+.up:hover { background-position: -36px top; cursor: pointer; }
+.upDown { background-position: -73px top; cursor: pointer; }
+.down { background-position: left bottom; }
+.down:hover { background-position: -36px bottom; cursor: pointer; }
+.downDown { background-position: -73px bottom; cursor: pointer; }
+
+.len {
+	/*background-color: #0f0;*/
+	padding: 5px 0px 5px 0px;
+}
+
+.len input {
+	font-size: 18pt;
+	text-align: center;
+	background-color: transparent;
+	color: #CCC;
+	border: none;
+	width: 40px;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	border-top: 1px solid #212121;
+	border-left: 1px solid #212121;
+}
+
+.len input:hover, .len input:focus{
+	background-color: #333;
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
+}
+
+.counter {
+	padding-top: 20px;
+}
+
+fieldset {
+	display: inline-block;
+	width: 90%;
+	background-color: #212121;
+	font-variant: small-caps;
+	border: none;
+	border-top: 1px solid #111;
+	border-left: 1px solid #111;
+	
+}
+
+fieldset legend {
+	background-color: inherit;
+	padding: 0px 0px 0px 0px;
+	text-align: left;
+}
+
+fieldset table {
+	width: 100%;
+}

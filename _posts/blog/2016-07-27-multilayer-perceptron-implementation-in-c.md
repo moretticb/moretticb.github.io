@@ -15,19 +15,19 @@ modified: 2016-06-01T14:19:19-04:00
 
 Artificial Neural Networks (ANNs) and the working principle of its architectures are not subjects commonly discussed (except if you are into machine learning fields) between programmers when it comes to appliable contexts, or at least not thoroughly exploited, for instance, through examples from practical perspectives.
 
-Divided in three sections (implementation details, usage and improvements), this article has the purpose of sharing an implementation of the backpropagation algorithm of the Multi-Layer Perceptron (MLP) architecture in C language as a complement to the therory available in the literature. Such implementation is available at GitHub.
+Divided in three sections ([implementation details](#implementation-details), [usage](#usage) and [improvements](#improvements)), this article has the purpose of sharing an implementation of the backpropagation algorithm of the Multi-Layer Perceptron (MLP) architecture in C language as a complement to the therory available in the literature. Such implementation is available at [GitHub][MLPGitHub].
 
-Before approaching details of the implemented ANN architecture, it is important to point out that basic knowledge regarding MLP and backpropagation algorithm is needed. If you are new to ANNs and MLP, I would recommend you to check this and this references.
+Before approaching details of the implemented ANN architecture, it is important to point out that basic knowledge regarding MLP and backpropagation algorithm is needed. If you are new to ANNs and MLP, I would recommend you to check [this][easyRef] and [this][hardRef] references.
 
 ## Implementation details
 
-The implementation was based in this book (which is also a great reference, but only available in portuguese), coded in ANSI-C and should be compiled by GCC.
+The implementation was based in [this][livroRNA] book (which is also a great reference, but only available in portuguese), coded in ANSI-C and should be compiled by GCC.
 
-Among several variations of the backpropagation algorithm, this implementation encompasses the generalized delta-rule with the momentum term in the adjustment of weights. Both training and operation modes are implemented in the same file (check Usage section to see how to trigger each mode). Therefore, this algorithm has the following adjustable parameters:
+Among several variations of the backpropagation algorithm, this implementation encompasses the generalized delta-rule with the momentum term in the adjustment of weights. Both training and operation modes are implemented in the same file (check [Usage](#usage) section to see how to trigger each mode). Therefore, this algorithm has the following adjustable parameters:
 
-* \\( \eta \\) Learning rate
-* \\( \epsilon \\) Precision (stopping criterion)
-* \\( \alpha \\) Momentum rate
+* ** \\( \eta \\) ** - Learning rate
+* ** \\( \epsilon \\) ** - Precision (stopping criterion)
+* ** \\( \alpha \\) ** - Momentum rate
 
 The program verboses two types of outputs (when flagged): adjusted weights and the mean square errors (MSEs) of each training epoch. The adjusted weights should be used as input of the operation mode in order to constitute the trained MLP. The weights are ordered according to the appearance of neurons in the topology (i.e., from the first neuron of the first hidden layer to the last neuron of the output layer), as indicated below:
 
@@ -82,7 +82,6 @@ Having the output of the training mode (the adjusted weights), here is how to tr
 
 ```shell
 ./mlp -i INPUTS -o OUTPUTS -l LAYERS n1 n2 nLAYERS -w
-
 ```
 
 where:
@@ -91,9 +90,9 @@ where:
 
 Runtime verbose may guide the user for inserting weights and network inputs in order to obtain the due output.
 
-You can also use a workbench-like tool I am developing in order to visually build the training mode command:
+You can also use a workbench-like [tool][workbench] I am developing in order to visually build the training mode command:
 
-(colocar aqui o iframe)
+<iframe width="600" height="315" src="/mlpcmdgen" frameborder="0"></iframe>
 
 ## Improvements
 
@@ -108,3 +107,9 @@ This implementation was focused only in algorithmic fidelity (didactic purposes)
 
 Fork me on GitHub if you’re keen on MLPs and ANNs and liked this project :)
 
+[MLPGitHub]: http://www.github.com/moretticb
+[easyRef]: http://people.sabanciuniv.edu/berrin/cs512/reading/mao-NN-tutorial.pdf
+[hardRef]: https://www.amazon.com/Neural-Networks-Learning-Machines-3rd/dp/0131471392
+[livroRNA]: http://laips.sel.eesc.usp.br/livrorna/
+[workbench]: http://www.moretticb.com
+[neuronaPost]: http://www.moretticb.com

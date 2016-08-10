@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link rel="stylesheet" type="text/css" href="cmdgenstyles.css" />
+<script type="text/javascript" src="cmdgenscripts.js"></script>
+
+<title>MLP Topology Workbench</title>
+</head>
+<body>
+
+<div class="wholeContainer">
+
+<div class="viewportTabs">
+	<div class="tabSel" id="topoTab" onclick="changeTab(this);"><div class="tabLeft"></div> topology <div class="tabRight"></div></div><div class="tabIdle" id="cmdTab" onclick="changeTab(this);"><div class="tabLeft"></div> command <div class="tabRight"></div></div>
+	<div class="txt">MLP Topology Workbench</div>
+</div><!--
+--><div class="previewViewport" id="viewport">
+    <div class="preview" id="topoContent"></div>
+    <div class="cmd" id="cmdContent" style="display:none;">
+		<p><span class="prompt">user@pc</span> $ <span id="cmdTrain">command</span><br>Here comes the output of the <b>training</b> step.</p>
+		<p><span class="prompt">user@pc</span> $ <span id="cmdTest">command</span><br>Here comes the output of the <b>test</b> step.</p>
+	</div>
+</div>
+<div class="panel">
+	<div id="layerAdjustContainer"></div>
+	<fieldset>
+		<legend><div class="tabLeft"></div> verbose <div class="tabRight"></div></legend>
+		<table>
+			<tr>
+				<td><label><input type="checkbox" id="epochs" onclick="drawCommands()" />total epochs</label></td>
+				<td><label><input type="checkbox" id="mse" onclick="drawCommands()" />mean square error (mse)</label></td>
+				<td><label><input type="checkbox" id="weights" checked="true" onclick="drawCommands()" />synaptic weights</label></td>
+			</tr>
+		</table>
+	</fieldset>
+</div>
+
+</div>
+
+</body>
+</html>

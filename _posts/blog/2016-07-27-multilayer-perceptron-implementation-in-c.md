@@ -105,7 +105,7 @@ This implementation was focused only in algorithmic fidelity (didactic purposes)
 * Append a new parameter to set a random seed, so outputs/outcomes can become reproductable.
 * Input buffer reading improvements, enabling batch-like feed for several instance in operation mode.
 
-Fork me on GitHub if you’re keen on MLPs and ANNs and liked this project :)
+[Fork me on GitHub][MLPGitHub] if you’re keen on MLPs and ANNs and liked this project :)
 
 [MLPGitHub]: http://www.github.com/moretticb
 [easyRef]: http://people.sabanciuniv.edu/berrin/cs512/reading/mao-NN-tutorial.pdf

@@ -30,7 +30,7 @@ Check also [Neurona documentation][NeuronaDocs] for code reference. [Click here]
 
 ## Projects
 
-An usage example of this library can be seen in the [Color sensor prototype][ColorSensorProj] project; Neurona performs color pattern recognition, given RGB values as input, retrieving the name of the recognized color.
+An usage example of this library can be seen in the **[Color sensor prototype][ColorSensorProj]** project; Neurona performs color pattern recognition, given RGB values as input, retrieving the name of the recognized color.
 
 [MLPTraining]: /blog/multilayer-perceptron-implementation-in-c/
 [NeuronaDocs]: /Neurona

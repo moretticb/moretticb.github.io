@@ -25,9 +25,9 @@ The implementation was based in [this][livroRNA] book (which is also a great ref
 
 Among several variations of the backpropagation algorithm, this implementation encompasses the generalized delta-rule with the momentum term in the adjustment of weights. Both training and operation modes are implemented in the same file (check [Usage](#usage) section to see how to trigger each mode). Therefore, this algorithm has the following adjustable parameters:
 
-* ** \\( \eta \\) ** - Learning rate
-* ** \\( \epsilon \\) ** - Precision (stopping criterion)
-* ** \\( \alpha \\) ** - Momentum rate
+* \\( \textbf{eta} \\) - Learning rate
+* \\( \textbf{\epsilon} \\) - Precision (stopping criterion)
+* \\( \textbf{\alpha} \\) - Momentum rate
 
 The program verboses two types of outputs (when flagged): adjusted weights and the mean square errors (MSEs) of each training epoch. The adjusted weights should be used as input of the operation mode in order to constitute the trained MLP. The weights are ordered according to the appearance of neurons in the topology (i.e., from the first neuron of the first hidden layer to the last neuron of the output layer), as indicated below:
 
@@ -92,14 +92,14 @@ Runtime verbose may guide the user for inserting weights and network inputs in o
 
 You can also use a workbench-like [tool][workbench] I am developing in order to visually build the training mode command:
 
-<iframe width="600" height="315" src="/mlpcmdgen" frameborder="0"></iframe>
+<iframe width="600" height="500" src="/mlpcmdgen/index.html" frameborder="0"></iframe>
 
 ## Improvements
 
 This implementation was focused only in algorithmic fidelity (didactic purposes), and therefore there are several improvements (from which I enumerated a few) to be done, towards an optimized and easy-to-use tool:
 
 * Better memory management: occurrences of memory dynamically allocated could be reduced (or even replaced with static allocation approaches). No allocated memory was freed in this program (sorry, I had a tight deadline to finish this implementation)
-	* Operation mode (the forward step) was optimized with statically allocated memory in Neurona – a project involving MLP for AVR microcontrollers
+	* Operation mode (the forward step) was optimized with statically allocated memory in [Neurona][neuronaPost] – a project involving MLP for AVR microcontrollers
 * Parameterize (at program execution) algorithm parameters such as \\( \eta \\), \\( \epsilon \\), \\( \alpha \\) and and the activation function to be used.
 * Implement stopping criterion by epochs (also parameterizable).
 * Append a new parameter to set a random seed, so outputs/outcomes can become reproductable.
@@ -111,5 +111,5 @@ Fork me on GitHub if you’re keen on MLPs and ANNs and liked this project :)
 [easyRef]: http://people.sabanciuniv.edu/berrin/cs512/reading/mao-NN-tutorial.pdf
 [hardRef]: https://www.amazon.com/Neural-Networks-Learning-Machines-3rd/dp/0131471392
 [livroRNA]: http://laips.sel.eesc.usp.br/livrorna/
-[workbench]: http://www.moretticb.com
+[workbench]: /mlpcmdgen
 [neuronaPost]: http://www.moretticb.com

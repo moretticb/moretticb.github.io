@@ -25,9 +25,9 @@ The implementation was based in [this][livroRNA] book (which is also a great ref
 
 Among several variations of the backpropagation algorithm, this implementation encompasses the generalized delta-rule with the momentum term in the adjustment of weights. Both training and operation modes are implemented in the same file (check [Usage](#usage) section to see how to trigger each mode). Therefore, this algorithm has the following adjustable parameters:
 
-* \\( \textbf{eta} \\) - Learning rate
-* \\( \textbf{\epsilon} \\) - Precision (stopping criterion)
-* \\( \textbf{\alpha} \\) - Momentum rate
+* \\( \eta \\) - Learning rate
+* \\( \epsilon \\) - Precision (stopping criterion)
+* \\( \alpha \\) - Momentum rate
 
 The program verboses two types of outputs (when flagged): adjusted weights and the mean square errors (MSEs) of each training epoch. The adjusted weights should be used as input of the operation mode in order to constitute the trained MLP. The weights are ordered according to the appearance of neurons in the topology (i.e., from the first neuron of the first hidden layer to the last neuron of the output layer), as indicated below:
 

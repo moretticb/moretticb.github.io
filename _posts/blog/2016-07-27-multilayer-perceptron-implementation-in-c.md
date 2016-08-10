@@ -92,7 +92,7 @@ Runtime verbose may guide the user for inserting weights and network inputs in o
 
 You can also use a workbench-like [tool][workbench] I am developing in order to visually build the training mode command:
 
-<iframe width="600" height="500" src="/mlpcmdgen/index.html" frameborder="0"></iframe>
+<iframe width="600" height="560" src="/mlpcmdgen/index.html" frameborder="0"></iframe>
 
 ## Improvements
 

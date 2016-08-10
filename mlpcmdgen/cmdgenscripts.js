@@ -2,6 +2,7 @@ var selTab = "topoTab";
 var topology;
 
 window.onload = function(){
+	
 	var randomSizes = [];
 	var randomLen = 3+Math.round(Math.random());
 	for(var i=0;i<randomLen;i++)

@@ -112,4 +112,4 @@ This implementation was focused only in algorithmic fidelity (didactic purposes)
 [hardRef]: https://www.amazon.com/Neural-Networks-Learning-Machines-3rd/dp/0131471392
 [livroRNA]: http://laips.sel.eesc.usp.br/livrorna/
 [workbench]: /mlpcmdgen
-[neuronaPost]: http://www.moretticb.com
+[neuronaPost]: /blog/neurona-neural-networks-for-arduino/

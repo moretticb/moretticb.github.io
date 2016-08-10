@@ -18,7 +18,7 @@ window.onresize = function(){
 	topo.style.height = (vp.offsetWidth/2)+"px";
 	document.getElementById('cmdContent').style.height = (vp.offsetWidth/2)+"px";
 	if(window.frameElement){
-		window.frameElement.style.height = (topo.offsetHeight+20+document.getElementById('panel').offsetHeight)+"px";
+		window.frameElement.style.height = (topo.offsetHeight+40+document.getElementById('panel').offsetHeight)+"px";
 	}
 	
 }

@@ -3,8 +3,7 @@ layout: post
 title: "Color sensor prototype using artificial neural networks"
 modified:
 categories: blog
-excerpt: This project encompasses the development of an initial architecture of a color sensor for colorblind using artificial neural networks. A Multi-Layer
-Perceptron topology, properly trained with backpropagation algorithm performs mapping in the RGB color space and the recognition of 10 different colors.
+excerpt: This project encompasses the development of an initial architecture of a color sensor for colorblind using artificial neural networks. A Multi-Layer Perceptron topology, properly trained with backpropagation algorithm performs mapping in the RGB color space and the recognition of 10 different colors.
 author: caio
 tags: [machine-learning,projects]
 share: true

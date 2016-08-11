@@ -115,7 +115,10 @@ From a balanced dataset, accuracy was considered to compare training results. Tr
 
 Bringing a more practical perspective, some colors were extracted from the dataset to perform some recognition tests:
 
-(figura com as cores)
+<figure>
+	<a href="/images/colorSensorTest.png"><img src="/images/colorSensorTest.png" alt="image"></a>
+	<figcaption>Printed samples for testing the color sensor.</figcaption>
+</figure>
 
 Numbers outside the figure are used for identification and numbers inside the figure indicate misclassifications, referencing which colors were classified instead. These colors were printed in sulfite paper with an inkjet printer - check the tiny paper squares in the video in the beginning of this post - so the *objects* consist of opaque material, proper for color detection.
 

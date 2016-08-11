@@ -14,12 +14,12 @@ modified: 2016-06-01T14:19:19-04:00
 ---
 Colors play a very important role in human daily activities, being tied several connotations, such as its functions in traffic lights, raiment of a particular profession, entity representation through geometric shapes, human-computer interaction concepts, and others. Such examples denote an universal language that does not sit well with idiomatic languages. Color blindness, however, affects (or even ceases) this sort of asset in communication, which can be [explained][PubMedLink] as abnormal photopigments, located in cone-shaped cells within the retina, called *cone cells*.
 
-This article is divided into the sections listed below. If you wanna jump to the technical details, check [implementation details](#implementation-details) or download the code at the [GitHub][ColorSensorRepo] repository. Before continuing your reading, check the project video to see what this project is really about :)
-
-(video do projeto)
-
 * Sections
 {:toc}
+
+This article is divided in the sections listed above. If you wanna jump to the technical details, check [implementation details](#implementation-details) or download the code at the [GitHub][ColorSensorRepo] repository. Before continuing your reading, check the project video to see what this project is really about :)
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/pc4IlCQ8TZM" frameborder="0"> </iframe>
 
 ## Project overview
 

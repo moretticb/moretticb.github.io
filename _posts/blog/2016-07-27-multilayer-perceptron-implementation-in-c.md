@@ -107,7 +107,7 @@ This implementation was focused only in algorithmic fidelity (didactic purposes)
 
 [Fork me on GitHub][MLPGitHub] if you’re keen on MLPs and ANNs and liked this project :)
 
-[MLPGitHub]: http://www.github.com/moretticb
+[MLPGitHub]: http://www.github.com/moretticb/ML-Implementations
 [easyRef]: http://people.sabanciuniv.edu/berrin/cs512/reading/mao-NN-tutorial.pdf
 [hardRef]: https://www.amazon.com/Neural-Networks-Learning-Machines-3rd/dp/0131471392
 [livroRNA]: http://laips.sel.eesc.usp.br/livrorna/

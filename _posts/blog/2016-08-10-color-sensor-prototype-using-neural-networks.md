@@ -54,7 +54,7 @@ $$ y_i^{post} = \begin{cases} 1 & \text{, if }y_i=\max(y)\\ 0 & \text{, otherwis
 
 where \\( y_i \\) is the output of the \\( i^{th} \\) neuron and \\( \max(y) \\) is the is the greatest output value. In practical terms, the neuron with the greatest output gives 1 as output and the remaining ones give 0. Simple as that.
 
-A trained MLP should create regions in the color space, separating color patterns, as shown below the visualization of the instances of the dataset. Gray color samples are also included for another version of the trained network, but pretend gray instances are not there.
+A trained MLP should create regions in the color space, separating color patterns, as shown below the [visualization][p3dLink] of the instances of the dataset. Gray color samples are also included for another version of the trained network, but pretend gray instances are not there.
 
 <iframe src="https://p3d.in/e/7DJDC+spin+load" width="640" height="480" frameborder="0" seamless allowfullscreen webkitallowfullscreen></iframe>
 
@@ -116,3 +116,4 @@ Numbers outside the figure are used for identification and numbers inside the fi
 [KodakLink]: http://motion.kodak.com/motion/uploadedFiles/US_plugins_acrobat_en_motion_education_colorTheory.pdf
 [NeuronaDocs]: /Neurona
 [NeuronaPost]: /blog/neurona-neural-networks-for-arduino/
+[p3dLink]: https://p3d.in/e/7DJDC+spin+load

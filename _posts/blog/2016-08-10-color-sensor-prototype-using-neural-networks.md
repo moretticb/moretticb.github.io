@@ -31,7 +31,11 @@ It is important to consider situations when the human eye unsuccessfully attempt
 
 An MLP, during training, should perform mapping of regions in the RGB color space illustrated below. Each region isolated by hyperplanes represent a color, so every new color pattern located in a particular region is classified as its respective color.
 
-(colocar cubos rgb aqui)
+<figure class="half">
+	<a href="/images/colorSensorRgbCube1.png"><img src="/images/colorSensorRgbCube1.png" alt="image"></a>
+	<a href="/images/colorSensorRgbCube2.png"><img src="/images/colorSensorRgbCube2.png" alt="image"></a>
+	<figcaption>RGB color space.</figcaption>
+</figure>
 
 ### Multi-Layer Perceptron
 

@@ -19,7 +19,7 @@ Colors play a very important role in human daily activities, being tied several 
 
 This article is divided in the sections listed above. If you wanna jump to the technical details, check [implementation details](#implementation-details) or download the code at the [GitHub][ColorSensorRepo] repository. Before continuing your reading, check the project video to see what this project is really about :)
 
-<iframe width="560" height="315" src="http://www.youtube.com/embed/pc4IlCQ8TZM" frameborder="0"> </iframe>
+<iframe width="560" height="315" src="//www.youtube.com/embed/pc4IlCQ8TZM" frameborder="0"> </iframe>
 
 ## Project overview
 

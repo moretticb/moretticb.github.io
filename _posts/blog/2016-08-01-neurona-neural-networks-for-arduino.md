@@ -35,4 +35,4 @@ An usage example of this library can be seen in the **[<u>Color sensor prototype
 [MLPTraining]: /blog/multilayer-perceptron-implementation-in-c/
 [NeuronaDocs]: /Neurona
 [ArduinoInstallHelp]: http://www.arduino.cc/en/guide/libraries
-[ColorSensorProj]: #
+[ColorSensorProj]: /blog/color-sensor-prototype-using-neural-networks/

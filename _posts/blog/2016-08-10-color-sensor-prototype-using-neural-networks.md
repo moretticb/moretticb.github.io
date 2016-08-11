@@ -14,7 +14,7 @@ modified: 2016-06-01T14:19:19-04:00
 ---
 Colors play a very important role in human daily activities, being tied several connotations, such as its functions in traffic lights, raiment of a particular profession, entity representation through geometric shapes, human-computer interaction concepts, and others. Such examples denote an universal language that does not sit well with idiomatic languages. Color blindness, however, affects (or even ceases) this sort of asset in communication, which can be [explained][PubMedLink] as abnormal photopigments, located in cone-shaped cells within the retina, called *cone cells*.
 
-This article is divided into the sections listed below. If you wanna jump to the technical details, check [implementation details][#implementation-details] or download the code at the [GitHub][ColorSensorRepo] repository. Before continuing your reading, check the project video to see what this project is really about :)
+This article is divided into the sections listed below. If you wanna jump to the technical details, check [implementation details](#implementation-details) or download the code at the [GitHub][ColorSensorRepo] repository. Before continuing your reading, check the project video to see what this project is really about :)
 
 (video do projeto)
 
@@ -50,12 +50,7 @@ Generalization will happen in the domain that the training set comprises, so it 
 
 The dataset (all examples) contains 75 instances of color patterns ranging from 0 to 1 (logistic activation function was used). Initially ranging from 0 to 255, these instances were preprocessed by simply dividing each value by 255 (rescaling), such that \\( 0 \leq x_1, x_2, x_3 \leq 1 \\). It is important to point out that only one neuron at the output layer must output 1, whereas the remaining ones must output zero. Of course this is not possible using a sigmoid activation function; that's when post-processing takes place:
 
-\\[
-y_i^{post}=\left\{\begin{matrix}
-1 & \text{, if }y_i=\max(y)\\ 
-0 & \text{, otherwise}
-\end{matrix}\right.
-\\]
+\\[y_i^{post}=\left{\begin{matrix} 1 & \text{, if }y_i=\max(y)\\ 0 & \text{, otherwise} \end{matrix}\right. \\]
 
 where \\( y_i \\) is the output of the \\( i^{th} \\) neuron and \\( \max(y) \\) is the is the greatest output value. In practical terms, the neuron with the greatest output gives 1 as output and the remaining ones give 0. Simple as that.
 
@@ -65,7 +60,7 @@ A trained MLP should create regions in the color space, separating color pattern
 
 ## Implementation details
 
-This section is divided in three parts: [electronic circuit][#electronic-circuit], [color theory][#color-theory] and [programming][#programming]. Click the links if you want to jump to a specific part.
+This section is divided in three parts: [electronic circuit](#electronic-circuit), [color theory](#color-theory) and [programming](#programming). Click the links if you want to jump to a specific part.
 
 ### Electronic circuit
 
@@ -77,7 +72,7 @@ The code uses the same pins shown below with one exception: I was using a common
 
 Another important detail is that I am using only one resistor with the RGB LED. Since one color at a time will be lit, I put the resistor in the common anode, with an average resistance of the resistors that **should have been** with the cathodes - it is laziness, I know and I am sorry! When I went to buy project parts, they didn't have everything I needed - but it is however very important to use the correct resistors with the cathodes in order to have fidelity in the collected RGB values in relation to RGB values in the computer. The way I did is not that bad, since the patterns are not distorted; they are just not the same colors we see in a computer screen.
 
-It can be observed from the scheme an adjacency between the RGB LED and the LDR Cell. That is because they must be isolated from ambient light (an oldie black film tube is the perfect piece), so calibration (explained in [Programming][#programming]) and recognition can be performed.
+It can be observed from the scheme an adjacency between the RGB LED and the LDR Cell. That is because they must be isolated from ambient light (an oldie black film tube is the perfect piece), so calibration (explained in [Programming](#programming)) and recognition can be performed.
 
 
 
@@ -93,13 +88,13 @@ Considering an additive color system, in which white and black are respectively 
 
 ### Programming
 
-For calibration and recognition, the color sensor executes three iterations, once a colored object is exposed to the RGB LED and the LDR Cell. In the first iteration, red light hits the object and the program waits LDR cell to stabilize its sensing; the analog input is then read and the reflection of the red light is stored. The program iterates twice more for green and blue colors. The figure shown in [Color theory][#color-theory] gives a good visual explanation of this iterative process.
+For calibration and recognition, the color sensor executes three iterations, once a colored object is exposed to the RGB LED and the LDR Cell. In the first iteration, red light hits the object and the program waits LDR cell to stabilize its sensing; the analog input is then read and the reflection of the red light is stored. The program iterates twice more for green and blue colors. The figure shown in [Color theory](#color-theory) gives a good visual explanation of this iterative process.
 
-Concerning calibration, the iterative process mentioned above is performed twice: once for black color and once for white color. Ax explained in [Color theory][#color-theory], this is for the detection of maximum and minimum - initially from *near zero* to *near 1024*, according to the reading resolution - reflections of red, green and blue lights, obtaining a true range to properly rescale to intervals \\( [0,255] \\) (for informative purpose) and \\( [0,1] \\) (the actual input to feed the neural network).
+Concerning calibration, the iterative process mentioned above is performed twice: once for black color and once for white color. Ax explained in [Color theory](#color-theory), this is for the detection of maximum and minimum - initially from *near zero* to *near 1024*, according to the reading resolution - reflections of red, green and blue lights, obtaining a true range to properly rescale to intervals \\( [0,255] \\) (for informative purpose) and \\( [0,1] \\) (the actual input to feed the neural network).
 
 The waiting time to stablish reading of the light sensor can vary acording to each electronic component, so it is good to give a good delay to ensure a steady sensing. In my case, I gave a 500-millisecond delay, but it is worth to initially use a bigger value and then decreasing it until the verge of a non steady behavior.
 
-In detection, the collected RGB values - ranging from 0 to 1 - feed an MLP, performing the actual color recognition. For the MLP running in Arduino, I am using [Neurona][NeuronaDocs] - a library I wrote to easily use ANNs in arduino, and runs very good. Check also [this][NeuronaPost] for more details; for training MLPs, I am using [an implementation][MLPLink] in C language (training and operation modes), giving the adjusted weights to use with Neurona. Still regarding training, it was used \\( \alpha=0.8 \\)), \\( \eta=0.1 \\) and \\( \epsilon=10^{-7} \\)).
+In detection, the collected RGB values - ranging from 0 to 1 - feed an MLP, performing the actual color recognition. For the MLP running in Arduino, I am using [Neurona][NeuronaDocs] - a library I wrote to easily use ANNs in arduino, and runs very good. Check also [this post][NeuronaPost] for more details; for training MLPs, I am using [an implementation][MLPLink] in C language (training and operation modes), giving the adjusted weights to use with Neurona. Still regarding training, it was used \\( \alpha=0.8 \\), \\( \eta=0.1 \\) and \\( \epsilon=10^{-7} \\).
 
 Given topologic configuration and the dataset, five trainings were performed (with cross-validation), each one with a random initial state of the synaptic weights:
 

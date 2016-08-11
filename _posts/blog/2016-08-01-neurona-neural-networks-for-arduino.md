@@ -10,7 +10,6 @@ share: true
 image:
   feature: neuronaCapa.png
 date: 2016-08-01W00:42:05-04:00
-modified: 2016-06-01T14:19:19-04:00
 ---
 Neurona is an Arduino library which allows boards to feed Artificial Neural Network (ANN) structures in order to perform tasks such as pattern recognition (classification), non-linear regression, function approximation and time-series prediction from the implemented architectures:
 

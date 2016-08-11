@@ -8,7 +8,11 @@ window.onload = function(){
 		randomSizes.push(Math.round(Math.random()*6)+1);
 	topology = randomSizes;
 	window.onresize();
-	newTopology();
+	if(window.location.hash.length==0)
+		newTopology();
+	else
+		window.onhashchange();
+	
 }
 
 window.onresize = function(){
@@ -24,7 +28,26 @@ window.onresize = function(){
 }
 
 window.onhashchange = function(){
-	alert('mudou: '+window.location.hash);
+	var params = window.location.hash.substr(1).split(',');
+	topology = [];
+
+	try{
+		if(params.length<=1)
+			throw "invalid parameters";
+		var size;
+		for(var i=0;i<params.length && params[i]!="-1";i++){
+			size = parseInt(params[i]);
+			if(isNaN(size))
+				throw "invalid parameters";
+			topology.push(size);
+		}
+			
+		newTopology();
+	} catch(e) {
+		window.location.hash="";
+		window.onload();
+	}
+
 }
 
 function drawNetwork(sizes){

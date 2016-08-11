@@ -39,8 +39,7 @@ Multi-Layer Perceptron is a feedforward architecture of ANNs, having an input (n
 
 Topology configuration (i.e., size of each layer) are defined according to a specific problem to be worked on. For this color sensor, as illustrated below, the neural network receives 3 inputs (RGB values), having one hidden layer with 6 neurons and an output layer with 10 neurons - just recalling: the output layer must have the same number of classes (colors, in this case), for a binarized output. Hidden-layer sizes are empirically obtained, stablishing ranges of values to train and find potentially good results (this can be a bit difficult and slow sometimes).
 
-(mlp workbench com a topologia do sensor de cores)
-
+<iframe width="600" height="560" src="/mlpcmdgen/index.html#3,6,10,-1" style="max-width: 600px; width: 100%;" frameborder="0"></iframe>
 
 ### Color recognition
 
@@ -66,7 +65,11 @@ This section is divided in three parts: [electronic circuit](#electronic-circuit
 
 Arising from objects, all the detection procedure happens in the electronic circuit, encompassing computational activity running in an Atmega328, which is hooked up in an Arduino Uno. Check the scheme below to see the wiring.
 
-(foto do esquema aqui)
+<figure class="half">
+	<a href="/images/colorSensorScheme1.png"><img src="/images/colorSensorScheme1.png" alt="image"></a>
+	<a href="/images/colorSensorScheme2.png"><img src="/images/colorSensorScheme2.png" alt="image"></a>
+	<figcaption>Electronic circuit schemes.</figcaption>
+</figure>
 
 The code uses the same pins shown below with one exception: I was using a common anode LED (different from the scheme), so check whether your RGB LED is also a common anode, otherwise just invert the logic in the code.
 
@@ -75,14 +78,16 @@ Another important detail is that I am using only one resistor with the RGB LED. 
 It can be observed from the scheme an adjacency between the RGB LED and the LDR Cell. That is because they must be isolated from ambient light (an oldie black film tube is the perfect piece), so calibration (explained in [Programming](#programming)) and recognition can be performed.
 
 
-
 ### Color theory
 
 Color perception performed by the electronic circuit is based in color theory concepts. Since there are no lenses (yet) involved, only objects with opaque (and matte) material should be considered, avoiding to deal with specular reflection of the LED. Diffuse reflection on the other hand is the key to perform color detection with lights. From an incident light, it is reflected in irregular surfaces, not creating that glowish effect that ruins the function of the LDR Cell.
 
 Back to actual color theory, when light (of a certain color) reaches an object, it is reflected according to properties of that object's color. For example, a red light reaching a yellow object will be reflected according to how much red exists in the composition of that yellow color - remember, we are talking about lights! - so it is expected to have a lot of red light being reflected, what makes sense when we think of the RGB composition of yellow (essentially red and green). However, when a blue light reaches the yellow object, no strong reflection is expected due to low presence of blue in the color composition.
 
-(figura do led e cubo amarelo)
+<figure>
+	<a href="/images/colorSensorDetection.png"><img src="/images/colorSensorDetection.png" alt="image"></a>
+	<figcaption>Acquisition of RGB values for detection and calibration.</figcaption>
+</figure>
 
 Considering an additive color system, in which white and black are respectively presence and absence of every colors (more details [here][KodakLink]), there can be measured (with the LDR Cell) maximum and minimum reflections of each light from the RGB LED which will reach colored objects. That said, it is possible to perform the calibration in electronic components involved in the circuit. This is another key to get fidelity in detection, as well as to ensure a stable detection of patterns (avoiding outliers) - here is a golden tip: after calibrating, try (hard!) not to move or touch neither the electronic components (specially when they are placed in a breadboard), nor the piece you are using (you must use) to isolate components from ambient light.
 

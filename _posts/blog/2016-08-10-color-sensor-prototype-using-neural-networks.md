@@ -55,7 +55,7 @@ where \\( y_i \\) is the output of the \\( i^{th} \\) neuron and \\( \max(y) \\)
 
 A trained MLP should create regions in the color space, separating color patterns, as shown below the [visualization][p3dLink] of the instances of the dataset. Gray color samples are also included for another version of the trained network, but pretend gray instances are not there.
 
-<iframe src="https://p3d.in/e/7DJDC+spin+load" width="640" height="480" frameborder="0" seamless allowfullscreen webkitallowfullscreen></iframe>
+<iframe src="https://p3d.in/e/7DJDC+spin+load" width="100%" height="480" frameborder="0" seamless allowfullscreen webkitallowfullscreen></iframe>
 
 ## Implementation details
 

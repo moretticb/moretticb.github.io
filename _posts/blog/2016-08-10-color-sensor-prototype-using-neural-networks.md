@@ -50,7 +50,7 @@ Generalization will happen in the domain that the training set comprises, so it 
 
 The dataset (all examples) contains 75 instances of color patterns ranging from 0 to 1 (logistic activation function was used). Initially ranging from 0 to 255, these instances were preprocessed by simply dividing each value by 255 (rescaling), such that \\( 0 \leq x_1, x_2, x_3 \leq 1 \\). It is important to point out that only one neuron at the output layer must output 1, whereas the remaining ones must output zero. Of course this is not possible using a sigmoid activation function; that's when post-processing takes place:
 
-\\[y_i^{post}=\left{\begin{matrix} 1 & \text{, if }y_i=\max(y)\\ 0 & \text{, otherwise} \end{matrix}\right. \\]
+\\[ $$ y_i^{post} = \begin{cases} 1 & \text{, if }y_i=\max(y)\\ 0 & \text{, otherwise} \end{cases} $$ \\]
 
 where \\( y_i \\) is the output of the \\( i^{th} \\) neuron and \\( \max(y) \\) is the is the greatest output value. In practical terms, the neuron with the greatest output gives 1 as output and the remaining ones give 0. Simple as that.
 

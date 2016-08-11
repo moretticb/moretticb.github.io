@@ -114,6 +114,7 @@ Given topologic configuration and the dataset, five trainings were performed (wi
 | 3          | 3315   | 80%      |
 | 4          | 4239   | 93%      |
 | 5          | 680    | 40%      |
+{: .table}
 
 From a balanced dataset, accuracy was considered to compare training results. Training #2 presented best generalization, being the one to have its weights embedded along with Neurona and the Arduino program.
 

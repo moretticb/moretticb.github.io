@@ -10,7 +10,6 @@ share: true
 image:
   feature: mlpCapa.png
 date: 2016-07-27W20:59:55-04:00
-modified: 2016-06-01T14:19:19-04:00
 ---
 
 Artificial Neural Networks (ANNs) and the working principle of its architectures are not subjects commonly discussed (except if you are into machine learning fields) between programmers when it comes to appliable contexts, or at least not thoroughly exploited, for instance, through examples from practical perspectives.

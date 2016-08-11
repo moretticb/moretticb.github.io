@@ -19,6 +19,7 @@ This article is divided into the sections listed below. If you wanna jump to the
 (video do projeto)
 
 * Sections
+{:toc}
 
 ## Project overview
 

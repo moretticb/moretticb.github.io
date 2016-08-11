@@ -107,13 +107,13 @@ In detection, the collected RGB values - ranging from 0 to 1 - feed an MLP, perf
 
 Given topologic configuration and the dataset, five trainings were performed (with cross-validation), each one with a random initial state of the synaptic weights:
 
-| Training # | Epochs | Accuracy |
-|:----------:|:------:|:--------:|
-| 1          | 1565   | 67%      |
-| 2          | 2353   | 95%      |
-| 3          | 3315   | 80%      |
-| 4          | 4239   | 93%      |
-| 5          | 680    | 40%      |
+| Training # | Epochs   | Accuracy |
+|:----------:|:--------:|:--------:|
+| 1          | 1565     | 67%      |
+| **2**      | **2353** | **95%**  |
+| 3          | 3315     | 80%      |
+| 4          | 4239     | 93%      |
+| 5          | 680      | 40%      |
 {: .table}
 
 From a balanced dataset, accuracy was considered to compare training results. Training #2 presented best generalization, being the one to have its weights embedded along with Neurona and the Arduino program.

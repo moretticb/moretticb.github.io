@@ -24,7 +24,7 @@ Since only the operation mode of these architectures are deployable in microcont
 
 If you want to install Neurona, you can either search for Neurona in Arduino’s Library Manager or download by clicking the button below:
 
-<div markdown="0"><a href="#" class="btn">Download Neurona</a></div>
+<div markdown="0"><a href="http://www.github.com/MorettiCB/Neurona" class="btn">Download Neurona</a></div>
 
 Check also [Neurona documentation][NeuronaDocs] for code reference. [Click here][ArduinoInstallHelp] if you need aditional help in the installation step.
 

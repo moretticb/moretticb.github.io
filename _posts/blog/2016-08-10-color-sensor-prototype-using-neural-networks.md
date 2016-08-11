@@ -8,7 +8,7 @@ author: caio
 tags: [machine-learning,projects]
 share: true
 image:
-  feature: so-simple-sample-image-3.jpg
+  feature: colorSensorCapa.png
 date: 2016-08-10W21:16:45-04:00
 modified: 2016-06-01T14:19:19-04:00
 ---

@@ -108,7 +108,7 @@ In detection, the collected RGB values - ranging from 0 to 1 - feed an MLP, perf
 Given topologic configuration and the dataset, five trainings were performed (with cross-validation), each one with a random initial state of the synaptic weights:
 
 | Training # | Epochs | Accuracy |
-|:-----------|:-------|:--------:|
+|:----------:|:------:|:--------:|
 | 1          | 1565   | 67%      |
 | 2          | 2353   | 95%      |
 | 3          | 3315   | 80%      |

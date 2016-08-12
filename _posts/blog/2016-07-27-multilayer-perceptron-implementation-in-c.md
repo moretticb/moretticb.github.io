@@ -14,9 +14,9 @@ date: 2016-07-27W20:59:55-04:00
 
 Artificial Neural Networks (ANNs) and the working principle of its architectures are not subjects commonly discussed (except if you are into machine learning fields) between programmers when it comes to appliable contexts, or at least not thoroughly exploited, for instance, through examples from practical perspectives.
 
-Divided in three sections ([implementation details](#implementation-details), [usage](#usage) and [improvements](#improvements)), this article has the purpose of sharing an implementation of the backpropagation algorithm of the Multi-Layer Perceptron (MLP) architecture in C language as a complement to the therory available in the literature. Such implementation is available at [GitHub][MLPGitHub].
+Divided in three sections ([implementation details](#implementation-details), [usage](#usage) and [improvements](#improvements)), this article has the purpose of sharing an implementation of the backpropagation algorithm of the Multi-Layer Perceptron (MLP) architecture in C language as a complement to the therory available in the literature. Such implementation is available at [GitHub][MLPGitHub]{:target="_blank"}.
 
-Before approaching details of the implemented ANN architecture, it is important to point out that basic knowledge regarding MLP and backpropagation algorithm is needed. If you are new to ANNs and MLP, I would recommend you to check [this][easyRef] and [this][hardRef] references.
+Before approaching details of the implemented ANN architecture, it is important to point out that basic knowledge regarding MLP and backpropagation algorithm is needed. If you are new to ANNs and MLP, I would recommend you to check [this][easyRef]{:target="_blank"} and [this][hardRef]{:target="_blank"} references.
 
 ## Implementation details
 
@@ -89,7 +89,7 @@ where:
 
 Runtime verbose may guide the user for inserting weights and network inputs in order to obtain the due output.
 
-You can also use a workbench-like [tool][workbench] I am developing in order to visually build the training mode command:
+You can also use a workbench-like [tool][workbench]{:target="_blank"} I am developing in order to visually build the training mode command:
 
 <iframe width="600" height="560" src="/mlpcmdgen/index.html" style="max-width: 600px; width: 100%;" frameborder="0"></iframe>
 
@@ -104,7 +104,7 @@ This implementation was focused only in algorithmic fidelity (didactic purposes)
 * Append a new parameter to set a random seed, so outputs/outcomes can become reproductable.
 * Input buffer reading improvements, enabling batch-like feed for several instance in operation mode.
 
-[Fork me on GitHub][MLPGitHub] if you’re keen on MLPs and ANNs and liked this project :)
+[Fork me on GitHub][MLPGitHub]{:target="_blank"} if you’re keen on MLPs and ANNs and liked this project :)
 
 [MLPGitHub]: http://www.github.com/moretticb/ML-Implementations
 [easyRef]: http://people.sabanciuniv.edu/berrin/cs512/reading/mao-NN-tutorial.pdf

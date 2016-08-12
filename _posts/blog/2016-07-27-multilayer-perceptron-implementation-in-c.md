@@ -20,7 +20,7 @@ Before approaching details of the implemented ANN architecture, it is important 
 
 ## Implementation details
 
-The implementation was based in [this][livroRNA] book (which is also a great reference, but only available in portuguese), coded in ANSI-C and should be compiled by GCC.
+The implementation was based in [this][livroRNA]{:target="_blank"} book (which is also a good reference, but only available in portuguese), coded in ANSI-C and should be compiled by GCC.
 
 Among several variations of the backpropagation algorithm, this implementation encompasses the generalized delta-rule with the momentum term in the adjustment of weights. Both training and operation modes are implemented in the same file (check [Usage](#usage) section to see how to trigger each mode). Therefore, this algorithm has the following adjustable parameters:
 

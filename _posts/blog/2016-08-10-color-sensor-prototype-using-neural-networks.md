@@ -11,12 +11,12 @@ image:
   feature: colorSensorCapa.png
 date: 2016-08-10W21:16:45-04:00
 ---
-Colors play a very important role in human daily activities, being tied several connotations, such as its functions in traffic lights, raiment of a particular profession, entity representation through geometric shapes, human-computer interaction concepts, and others. Such examples denote an universal language that does not sit well with idiomatic languages. Color blindness, however, affects (or even ceases) this sort of asset in communication, which can be [explained][PubMedLink] as abnormal photopigments, located in cone-shaped cells within the retina, called *cone cells*.
+Colors play a very important role in human daily activities, being tied several connotations, such as its functions in traffic lights, raiment of a particular profession, entity representation through geometric shapes, human-computer interaction concepts, and others. Such examples denote an universal language that does not sit well with idiomatic languages. Color blindness, however, affects (or even ceases) this sort of asset in communication, which can be [explained][PubMedLink]{:target="_blank"} as abnormal photopigments, located in cone-shaped cells within the retina, called *cone cells*.
 
 * Sections
 {:toc}
 
-This article is divided in the sections listed above. If you wanna jump to the technical details, check [implementation details](#implementation-details) or download the code at the [GitHub][ColorSensorRepo] repository. Before continuing your reading, check the project video to see what this project is really about :)
+This article is divided in the sections listed above. If you wanna jump to the technical details, check [implementation details](#implementation-details) or download the code at the [GitHub][ColorSensorRepo]{:target="_blank"} repository. Before continuing your reading, check the project video to see what this project is really about :)
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/pc4IlCQ8TZM" frameborder="0"> </iframe>
 
@@ -46,7 +46,7 @@ Topology configuration (i.e., size of each layer) are defined according to a spe
 
 ### Color recognition
 
-With the purpose of obtaining generalization with an MLP for a good recognition of RGB patterns, a training set (examples of colors with the desired output) must be presented to the network for the training step ([download][MLPLink] the implemented architecture to perform training). The training set used in this project is available at the project's [GitHub][ColorSensorRepo] repository.
+With the purpose of obtaining generalization with an MLP for a good recognition of RGB patterns, a training set (examples of colors with the desired output) must be presented to the network for the training step ([download][MLPGitHubLink]{:target="_blank"} the implemented architecture to perform training). The training set used in this project is available at the project's [GitHub][ColorSensorRepo]{:target="_blank"} repository.
 
 Generalization will happen in the domain that the training set comprises, so it is worth to pay attention to min and max values of each component of the space! Do not feed the network with patterns outside this domain, otherwise the output is not expected to work correctly.
 
@@ -56,7 +56,7 @@ $$ y_i^{post} = \begin{cases} 1 & \text{, if }y_i=\max(y)\\ 0 & \text{, otherwis
 
 where \\( y_i \\) is the output of the \\( i^{th} \\) neuron and \\( \max(y) \\) is the is the greatest output value. In practical terms, the neuron with the greatest output gives 1 as output and the remaining ones give 0. Simple as that.
 
-A trained MLP should create regions in the color space, separating color patterns, as shown below the [visualization][p3dLink] of the instances of the dataset. Gray color samples are also included for another version of the trained network, but pretend gray instances are not there.
+A trained MLP should create regions in the color space, separating color patterns, as shown below the [visualization][p3dLink]{:target="_blank"} of the instances of the dataset. Gray color samples are also included for another version of the trained network, but pretend gray instances are not there.
 
 <iframe src="https://p3d.in/e/7DJDC+spin+load" width="100%" height="480" frameborder="0" seamless allowfullscreen webkitallowfullscreen></iframe>
 
@@ -92,7 +92,7 @@ Back to actual color theory, when light (of a certain color) reaches an object, 
 	<figcaption>Acquisition of RGB values for detection and calibration.</figcaption>
 </figure>
 
-Considering an additive color system, in which white and black are respectively presence and absence of every colors (more details [here][KodakLink]), there can be measured (with the LDR Cell) maximum and minimum reflections of each light from the RGB LED which will reach colored objects. That said, it is possible to perform the calibration in electronic components involved in the circuit. This is another key to get fidelity in detection, as well as to ensure a stable detection of patterns (avoiding outliers) - here is a golden tip: after calibrating, try (hard!) not to move or touch neither the electronic components (specially when they are placed in a breadboard), nor the piece you are using (you must use) to isolate components from ambient light.
+Considering an additive color system, in which white and black are respectively presence and absence of every colors (more details [here][KodakLink]{:target="_blank"}), there can be measured (with the LDR Cell) maximum and minimum reflections of each light from the RGB LED which will reach colored objects. That said, it is possible to perform the calibration in electronic components involved in the circuit. This is another key to get fidelity in detection, as well as to ensure a stable detection of patterns (avoiding outliers) - here is a golden tip: after calibrating, try (hard!) not to move or touch neither the electronic components (specially when they are placed in a breadboard), nor the piece you are using (you must use) to isolate components from ambient light.
 
 ### Programming
 
@@ -102,7 +102,7 @@ Concerning calibration, the iterative process mentioned above is performed twice
 
 The waiting time to stablish reading of the light sensor can vary acording to each electronic component, so it is good to give a good delay to ensure a steady sensing. In my case, I gave a 500-millisecond delay, but it is worth to initially use a bigger value and then decreasing it until the verge of a non steady behavior.
 
-In detection, the collected RGB values - ranging from 0 to 1 - feed an MLP, performing the actual color recognition. For the MLP running in Arduino, I am using [Neurona][NeuronaDocs] - a library I wrote to easily use ANNs in arduino, and runs very good. Check also [this post][NeuronaPost] for more details; for training MLPs, I am using [an implementation][MLPLink] in C language (training and operation modes), giving the adjusted weights to use with Neurona. Still regarding training, it was used \\( \alpha=0.8 \\), \\( \eta=0.1 \\) and \\( \epsilon=10^{-7} \\).
+In detection, the collected RGB values - ranging from 0 to 1 - feed an MLP, performing the actual color recognition. For the MLP running in Arduino, I am using [Neurona][NeuronaDocs]{:target="_blank"} - a library I wrote to easily use ANNs in arduino. Check also [this post][NeuronaPost] for more details; for training MLPs, I am using [an implementation][MLPLink] in C language (training and operation modes), giving the adjusted weights to use with Neurona. Still regarding training, it was used \\( \alpha=0.8 \\), \\( \eta=0.1 \\) and \\( \epsilon=10^{-7} \\).
 
 Given topologic configuration and the dataset, five trainings were performed (with cross-validation), each one with a random initial state of the synaptic weights:
 
@@ -131,6 +131,7 @@ Numbers outside the figure are used for identification and numbers inside the fi
 [PubMedLink]: http://www.ncbi.nlm.nih.gov/pubmedhealth/PMHT0024265/
 [ColorSensorRepo]: http://www.github.com/
 [MLPLink]: /blog/multilayer-perceptron-implementation-in-c/
+[MLPGitHubLink]: https://github.com/moretticb/ML-Implementations/tree/master/MLP
 [KodakLink]: http://motion.kodak.com/motion/uploadedFiles/US_plugins_acrobat_en_motion_education_colorTheory.pdf
 [NeuronaDocs]: /Neurona
 [NeuronaPost]: /blog/neurona-neural-networks-for-arduino/

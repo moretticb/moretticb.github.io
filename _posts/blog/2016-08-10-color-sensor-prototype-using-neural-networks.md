@@ -129,10 +129,10 @@ Bringing a more practical perspective, some colors were extracted from the datas
 Numbers outside the figure are used for identification and numbers inside the figure indicate misclassifications, referencing which colors were classified instead. These colors were printed in sulfite paper with an inkjet printer - check the tiny paper squares in the video in the beginning of this post - so the *objects* consist of opaque material, proper for color detection.
 
 [PubMedLink]: http://www.ncbi.nlm.nih.gov/pubmedhealth/PMHT0024265/
-[ColorSensorRepo]: http://www.github.com/
+[ColorSensorRepo]: http://www.github.com/moretticb/moretticb/ColorSensor
 [MLPLink]: /blog/multilayer-perceptron-implementation-in-c/
 [MLPGitHubLink]: https://github.com/moretticb/ML-Implementations/tree/master/MLP
-[KodakLink]: http://motion.kodak.com/motion/uploadedFiles/US_plugins_acrobat_en_motion_education_colorTheory.pdf
+[KodakLink]: http://motion.kodak.com/KodakGCG/uploadedfiles/motion/US_plugins_acrobat_en_motion_education_colorTheory.pdf
 [NeuronaDocs]: /Neurona
 [NeuronaPost]: /blog/neurona-neural-networks-for-arduino/
 [p3dLink]: https://p3d.in/e/7DJDC+spin+load

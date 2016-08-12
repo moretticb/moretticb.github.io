@@ -14,15 +14,15 @@ Passionate about computers, music and electronics, Caio is a doctoral student in
 * Bachelor
 
 |:---:|:---|
-|db| teste<br>teste |
+| <img src="/images/logo_fsdb.jpg"> | **Faculdade Salesiana Dom Bosco de Piracicaba (FSDB)** <br> Information Systems <br> 2010-2013 |
 
 * MSc
 
 |:---:|:---|
-|db| teste |
+| <img src="/images/logo_eesc.png"> | **Escola de Engenharia de São Carlos (EESC-USP)** <br> Mechanical Engineering (with emphasis in Computer Science) <br> 2014-2016 |
 
 * Doctorate
 
 |:---:|:---|
-|db| teste |
+| <img src="/images/logo_icmc.png"> | **Instituto de Ciências Matemáticas e de Computação (ICMC-USP)** <br> Computer Science and Computational Mathematics <br> 2016 - |
 

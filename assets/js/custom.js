@@ -15,7 +15,6 @@ var doodleDates = [
 
 function checkDoodle(){
 	var doodleImg = document.getElementById("doodle");
-	return doodleImg;
 	var date = new Date();
 	doodles = doodleDates[date.getMonth()];
 	for(var i in doodles){

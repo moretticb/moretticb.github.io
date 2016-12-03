@@ -13,14 +13,20 @@ var doodleDates = [
 	[{b:1,e:26,name:"xmas"},{b:27,e:31,name:"newyear"}] //12
 ];
 
-function checkDoodle(){
-	var doodleImg = document.getElementById("doodle");
+var imgToLoad = new Image(10,10);
+imgToLoad.src = "/images/site-logo-"+getDoodleName()+".png"
+
+function getDoodleName(){
 	var date = new Date();
 	doodles = doodleDates[date.getMonth()];
 	for(var i in doodles){
 		if(date.getDate()>=doodles[i].b && date.getDate()<=doodles[i].e){
-			doodleImg.src = "/images/site-logo-"+doodles[i].name+".png"
-			return false;
+			return doodles[i].name;
 		}
 	}
+}
+
+function checkDoodle(){
+	var doodleImg = document.getElementById("doodle");
+	doodleImg.src = imgToLoad.src;
 }

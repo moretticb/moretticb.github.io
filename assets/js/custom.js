@@ -10,7 +10,7 @@ var doodleDates = [
 	[], //9
 	[], //10
 	[], //11
-	[{b:1,e:26,name:"xmas"},{b:,27,e:1,name:"newyear"}] //12
+	[{b:1,e:26,name:"xmas"},{b:27,e:1,name:"newyear"}] //12
 ];
 
 function checkDoodle(){

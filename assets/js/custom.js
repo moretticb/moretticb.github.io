@@ -2,7 +2,7 @@ var doodleDates = [
 	[{b:1,e:1,name:"newyear"}], //1
 	[{b:20,e:29,name:"carnival"}], //2
 	[{b:1,e:1,name:"carnival"}], //3
-	[], //4
+	[{b:10,e:17,name:"easter"}], //4
 	[], //5
 	[], //6
 	[], //7

@@ -64,7 +64,7 @@ The *TileMap* class also performs a conversion from the level file structure to 
 
 Every element shown in *MapArea* that smoothly moves or changes its visual aspect undergoes an animation effect. Motion transition between current and next positions in the map, as well as changes in states of sprite sequences are covered below.
 
-From game mechanics perspective, a walking character, for instance, consists of indicating current and next positions until the path to walk is completely traveled. Positioning characters, graphically, is about a rough change from one cell to another in the map. That is when animation takes place to make these rough transitions more smooth, at a frame update rate (FPS).
+From game mechanics perspective, a walking character, for instance, consists of indicating current and next positions until the path to walk is completely traversed. Positioning characters, graphically, is about a rough change from one cell to another in the map. That is when animation takes place to make these rough transitions more smooth, at a frame update rate (FPS).
 
 ### Spriter
 
@@ -121,7 +121,7 @@ Another interesting detail is that I just mentioned the actor follows the actee 
 
 If you read until here - I tried to be brief, sorry! - I believe understanding the game loop will not be a problem. Below we have some definitions and the game loop algorithm.
 
-* \\( players \\) is a list of *GameChar* instances (*GamePlayer* or *GameComputer*)
+* \\( players \\) is a collection of *GameChar* instances (*GamePlayer* or *GameComputer*)
 * \\( p_{target} \\) is a *GameChar* \\( p \\) has to follow
 * \\( p_{waypoint} \\) a destination cell (the location on the map) to go to
 * \\( p_{position} \\) is the current location of \\( p \\)

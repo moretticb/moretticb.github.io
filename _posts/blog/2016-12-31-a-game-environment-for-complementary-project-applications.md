@@ -45,7 +45,7 @@ The mouse listener is used to click on a point of the map either to go to, or to
 
 ## Level
 
-Given a [tileset][tilesetWiki]{:target="_blank"} image CSV file with comma-separated tileset coordinates, an image of the map can be built. As illustrates the figure below, each coordinate consists of two values and a special character (between coordinate values) to indicate whether the player can walk on that tile (floor) or not (wall).
+Given a [tileset][tilesetWiki]{:target="_blank"} image and a CSV file with comma-separated tileset coordinates, an image of the map can be built. As illustrates the figure below, each coordinate consists of two values and a special character (between coordinate values) to indicate whether the player can walk on that tile (floor) or not (wall).
 
 <figure>
         <a href="/images/LevelDiagram.png"><img src="/images/LevelDiagram.png" alt="image"></a>
@@ -54,7 +54,7 @@ Given a [tileset][tilesetWiki]{:target="_blank"} image CSV file with comma-separ
 
 ### Tile map
 
-From the CSV file where a level is designed, *TileMap* class builds the tilemap image. For each coordinate, the due referenced area of the tileset is copied and drawn in the tilemap image. The arrangement of tiles is obviously the same as the organization of coordinates in the level file.
+From the CSV file where a level is designed, *TileMap* class builds the tilemap image. For each coordinate, the due referenced area of the tileset is copied and drawn on the tilemap image. The arrangement of tiles is obviously the same as the organization of coordinates in the level file.
 
 ### Pathfinder algorithm
 
@@ -64,11 +64,11 @@ The *TileMap* class also performs a conversion from the level file structure to 
 
 Every element shown in *MapArea* that smoothly moves or changes its visual aspect undergoes an animation effect. Motion transition between current and next positions in the map, as well as changes in states of sprite sequences are covered below.
 
-From a game mechanics perspective, a walking character, for instance, consists of indicating current and next positions until the path to walk is completely traveled. Positioning characters, graphically, is about a rough change from one cell to another in the map. That is when animation takes place to make these rough transitions more smooth, at a frame update rate (FPS).
+From game mechanics perspective, a walking character, for instance, consists of indicating current and next positions until the path to walk is completely traveled. Positioning characters, graphically, is about a rough change from one cell to another in the map. That is when animation takes place to make these rough transitions more smooth, at a frame update rate (FPS).
 
 ### Spriter
 
-Still regarding walking character example, it is necessary to show creatures movements coupled with motion along the map. These movements are represented in frame-by-frame animations in a *spritesheet*, or simply sprite, where each frame is an image of a character in a particular pose, composing the whole movement animation, which I am going to call a *State*.
+Still regarding walking character example, it is necessary to show creatures' movements coupled with motion along the map. These movements are represented in frame-by-frame animations in a *spritesheet*, or simply sprite, where each frame is an image of a character in a particular pose, composing the whole movement animation, which I am going to call a *State*.
 
 <figure>
         <a href="/images/SpriterDiagram.gif"><img src="/images/SpriterDiagram.gif" alt="image"></a>
@@ -97,7 +97,7 @@ I took this oportunity also to implement - because it's fun - some simplified ea
         <figcaption>Quadratic interpolation of values for motion animation</figcaption>
 </figure>
 
-*Easing in* is about giving a boost at the end of interpolation (obviously because it begins with ease), whose behavior is given by linear behavior raised to some power to define the \\( order \\) of the polynomial and hence the boost intensity. As an example, below we consider \\( order=2 \\), so we have a quadratic function, or simply a quadratic ease in. *Easing out* plays the opposite role, whose behavior is the inverse function of the *easing in* polynomial.
+*Easing in* is about giving a boost at the end of interpolation (obviously because it begins with ease), whose behavior is given by linear behavior raised to some power to define the \\( order \\) of the polynomial and hence the boost intensity. As an example, above we consider \\( order=2 \\), so we have a quadratic function, or simply a quadratic ease in. *Easing out* plays the opposite role, whose behavior is the inverse function of the *easing in* polynomial.
 
 For more about easing, check out [Robert Penner's website][pennerEasing]{:target="_blank"}. There - different from here, where we deal with the highest-degree term of the polynomial only - can be found a deeper background on easing functions, as well as manipulation of polynomial coefficients and combination of easing in and out.
 
@@ -109,7 +109,7 @@ Every character (player and non-player) we see on the map is essentialy a *GameC
 
 Interaction between game characters can be seen as actions being executed to each other. Every action involves two people: the one who executes and the undergone one, people I am respectively calling actor and actee - of course *actee* is a made-up word, it was inspired in a [funny line of Chandler's][chandlerVideo]{:target="_blank"} in a Friends episode where he said "*... and the messers become the messees!*" - who are instances of *GameChar*.
 
-Having an actor and an actee, an action behavior can be expressed through *GameChar* (or even through *GamePlayer* or *GameComputer*) methods. I could drain health points (HP) from a character, for example, by simply implementing a total of HP in characters; then public methods could remove some HP from actee and increment it in actor's, and so on.Currently, as stated in [GUI section](#gui), the implemented actions are to follow, to stun, to slow and to kill.
+Having an actor and an actee, an action behavior can be expressed through *GameChar* (or even through *GamePlayer* or *GameComputer*) methods. I could drain health points (HP) from a character, for example, by simply implementing a total of HP in characters; then public methods could remove some HP from actee and increment it in actor's, and so on. Currently, as stated in [GUI section](#gui), the implemented actions are to follow, to stun, to slow and to kill.
 
 Given two characters on a map and [*melee*][meleeWiki]{:target="_blank"} actions, actor follows actee until they are close enough, and then the action itself is executed. Closeness here is defined by euclidean and manhattan distances (\\( d_{euclidean}(\cdot , \cdot ) \\) and \\( d_{manhattan}(\cdot , \cdot ) \\)) - see their usage at [Game loop](#game-loop) section.
 
@@ -119,7 +119,17 @@ Another interesting detail is that I just mentioned the actor follows the actee 
 
 ## Game loop
 
-If you read until here - I tried to be brief, sorry! - I believe understanding the game loop will not be a problem:
+If you read until here - I tried to be brief, sorry! - I believe understanding the game loop will not be a problem. Below we have some definitions and the game loop algorithm.
+
+* \\( players \\) is a list of *GameChar* instances (*GamePlayer* or *GameComputer*)
+* \\( p_{target} \\) is a *GameChar* \\( p \\) has to follow
+* \\( p_{waypoint} \\) a destination cell (the location on the map) to go to
+* \\( p_{position} \\) is the current location of \\( p \\)
+* \\( p_{anim} \\) is the *Animator* instance for animating motion of \\( p \\)
+* \\( p_{path} \\) is a collection of cells, which creates a path from \\( p_{position} \\) to \\( p_{waypoint} \\)
+* \\( p_{busy} \\) indicates whether \\( p \\) is busy traversing a path
+* \\( p_{spriter} \\) is the *Spriter* instance for frame-by-frame animations of \\( p \\)
+* \\( p_{direction} \\) is the current direction \\( p \\) is walking towards
 
 <figure>
         <a href="/images/GameLoopAlgorithm.png"><img src="/images/GameLoopAlgorithm.png" alt="image"></a>

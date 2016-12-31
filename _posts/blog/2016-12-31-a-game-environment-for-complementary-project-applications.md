@@ -5,7 +5,7 @@ modified:
 categories: blog
 excerpt: As a pretext to simplify the integration of projects applied to games, I developed a simplified and manipulable 2D game engine, enabling to focus essentially on project goals and avoiding to deal with interfacing matters, which can eventually become a complicated task.
 author: caio
-tags: [gaming,machine-learning]
+tags: [gaming]
 share: true
 image:
   feature: GameEnvCapa.png

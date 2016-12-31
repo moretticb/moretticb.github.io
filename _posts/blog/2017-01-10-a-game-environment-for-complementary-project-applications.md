@@ -99,19 +99,19 @@ I took this oportunity also to implement - because it's fun - some simplified ea
 
 *Easing in* is about giving a boost at the end of interpolation (obviously because it begins with ease), whose behavior is given by linear behavior raised to some power to define the \\( order \\) of the polynomial and hence the boost intensity. As an example, below we consider \\( order=2 \\), so we have a quadratic function, or simply a quadratic ease in. *Easing out* plays the opposite role, whose behavior is the inverse function of the *easing in* polynomial.
 
-For more about easing, check out [Robert Penner's website][pennerEasing]. There - different from here, where we deal with the highest-degree term of the polynomial only - can be found a deeper background on easing functions, as well as manipulation of polynomial coefficients and combination of easing in and out.
+For more about easing, check out [Robert Penner's website][pennerEasing]{:target="_blank"}. There - different from here, where we deal with the highest-degree term of the polynomial only - can be found a deeper background on easing functions, as well as manipulation of polynomial coefficients and combination of easing in and out.
 
 ## Characters
 
-Every character (player and non-player) we see on the map is essentialy a *GameChar*. Looking at the [class diagram][ClassDiagram] we can see that no specific behavior (functionality) exists in their actual implementations *GamePlayer* (human players) and *GameComputer* (non-human players, a.k.a. NPCs). *GameChar* assumes an abstract role here, even though technically it is not. I left it like that on purpose for further implementations, because such an arrangement of entities would easily allow to separate different ways to perform the same behavior - polymorphism rocks - and then *GameChar* would truly become an abstract class.
+Every character (player and non-player) we see on the map is essentialy a *GameChar*. Looking at the [class diagram][ClassDiagram]{:target="_blank} we can see that no specific behavior (functionality) exists in their actual implementations *GamePlayer* (human players) and *GameComputer* (non-human players, a.k.a. NPCs). *GameChar* assumes an abstract role here, even though technically it is not. I left it like that on purpose for further implementations, because such an arrangement of entities would easily allow to separate different ways to perform the same behavior - polymorphism rocks - and then *GameChar* would truly become an abstract class.
 
 ### Actions
 
-Interaction between game characters can be seen as actions being executed to each other. Every action involves two people: the one who executes and the undergone one, people I am respectively calling actor and actee - of course *actee* is a made-up word, I got that in a [funny line of Chandler's][chandlerVideo] in a Friends episode where he said "*... and the messers become the messees!*" - who are instances of *GameChar*.
+Interaction between game characters can be seen as actions being executed to each other. Every action involves two people: the one who executes and the undergone one, people I am respectively calling actor and actee - of course *actee* is a made-up word, it was inspired in a [funny line of Chandler's][chandlerVideo]{:target="_blank"} in a Friends episode where he said "*... and the messers become the messees!*" - who are instances of *GameChar*.
 
 Having an actor and an actee, an action behavior can be expressed through *GameChar* (or even through *GamePlayer* or *GameComputer*) methods. I could drain health points (HP) from a character, for example, by simply implementing a total of HP in characters; then public methods could remove some HP from actee and increment it in actor's, and so on.Currently, as stated in [GUI section](#gui), the implemented actions are to follow, to stun, to slow and to kill.
 
-Given two characters on a map and [*melee*][meleeWiki] actions, actor follows actee until they are close enough, and then the action itself is executed. Closeness here is defined by euclidean and manhattan distances (\\( d_{euclidean}(\cdot , \cdot ) and d_{manhattan}(\cdot , \cdot ) \\)) - see their usage at [Game loop](#game-loop) section.
+Given two characters on a map and [*melee*][meleeWiki]{:target="_blank"} actions, actor follows actee until they are close enough, and then the action itself is executed. Closeness here is defined by euclidean and manhattan distances (\\( d_{euclidean}(\cdot , \cdot ) and d_{manhattan}(\cdot , \cdot ) \\)) - see their usage at [Game loop](#game-loop) section.
 
 Another interesting detail is that I just mentioned the actor follows the actee before executing an action, and then the action is executed; I also mentioned the existence of a Follow action. If you check the code, you will notice there is nothing to do at *FollowAction* class, because following is, say, a primitive function in the game, so when actor reaches actee, if action is an instance of FollowAction, actor must not stop following actee - I just translated code to text, check it yourself :).
 
@@ -126,7 +126,7 @@ If you read until here - I tried to be brief, sorry! - I believe understanding t
         <figcaption>Game loop algorithm</figcaption>
 </figure>
 
-It is a simplified version of the logic running in a separated Thread to update the screen, state of characters and everything else in the game. Click [here][GameLoopAlgorithm] to open the original image (if everything is too short to read).
+It is a simplified version of the logic running in a separated Thread to update the screen, state of characters and everything else in the game. Click [here][GameLoopAlgorithm]{:target="_blank"} to open the original image (if everything is too short to read).
 
 [EclipseOrg]: http://www.eclipse.org/
 [GitHubGameEnv]: http://www.github.com/moretticb/GameEnv

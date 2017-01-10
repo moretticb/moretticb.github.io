@@ -107,7 +107,7 @@ Every character (player and non-player) we see on the map is essentialy a *GameC
 
 ### Actions
 
-Interaction between game characters can be seen as actions being executed to each other. Every action involves two people: the one who executes and the undergone one, people I am respectively calling actor and actee - of course *actee* is a made-up word, it was inspired in a [funny line of Chandler's][chandlerVideo]{:target="_blank"} in a Friends episode where he said "*... and the messers become the messees!*" - who are instances of *GameChar*.
+Interaction between game characters can be seen as actions being executed to each other. Every action involves two people: the one who executes and the undergone one, people I am respectively calling actor and actee - of course *actee* is a made-up word, it was inspired in a [funny line of Chandler's][chandlerVideo]{:target="_blank"} in a Friends episode where he said "*... the messers become the messees!*" - who are instances of *GameChar*.
 
 Having an actor and an actee, an action behavior can be expressed through *GameChar* (or even through *GamePlayer* or *GameComputer*) methods. I could drain health points (HP) from a character, for example, by simply implementing a total of HP in characters; then public methods could remove some HP from actee and increment it in actor's, and so on. Currently, as stated in [GUI section](#gui), the implemented actions are to follow, to stun, to slow and to kill.
 

@@ -3,7 +3,7 @@ layout: post
 title: "A game environment for the integration of complementary game-based projects"
 modified:
 categories: blog
-excerpt: As a pretext to simplify the integration of projects applied to games, I developed a simplified and manipulable 2D game engine, enabling to focus essentially on project goals and avoiding to deal with interfacing matters, which can eventually become a complicated task.
+excerpt: With the purpose of simplifying the integration of projects applied to games, I developed a simplified and manipulable 2D game engine, enabling to focus essentially on project goals and avoiding to deal with interfacing matters, which can eventually become a complicated task.
 author: caio
 tags: [gaming]
 share: true
@@ -13,7 +13,7 @@ date: 2016-12-31W23:59:55-04:00
 ---
 
 
-As a pretext to simplify the integration of projects applied to games, I developed a simplified and manipulable 2D game engine, enabling to focus essentially on project goals and avoiding to deal with interfacing matters, which can eventually become a complicated task. At least at initial stages of a project development, this approach is useful to recreate games with the same underlying mechanics, until the stage (if necessary) where integration with the original game environment takes place.
+With the purpose of simplifying the integration of projects applied to games, I developed a simplified and manipulable 2D game engine, enabling to focus essentially on project goals and avoiding to deal with interfacing matters, which can eventually become a complicated task. At least at initial stages of a project development, this approach is useful to recreate games with the same underlying mechanics, until the stage (if necessary) where integration with the original game environment takes place.
 
 Everything was developed in Java and the projects were created using [Eclipse][EclipseOrg]{:target="_blank"}. As [A\*][GitHubAStar]{:target="_blank"} algorithm can be used not only with this [Game environment][GitHubGameEnv]{:target="_blank"}, I separated both projects in GitHub. If you are using Eclipse as well, don't forget to [add][AddProj]{:target="_blank"} A\* project to the Java Build Path.
 

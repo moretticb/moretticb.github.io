@@ -14,7 +14,7 @@ var doodleDates = [
 ];
 
 var imgToLoad = new Image(10,10);
-if(getDoodleName(){
+if(getDoodleName()){
 	imgToLoad.src = "/images/site-logo-"+getDoodleName()+".png";
 } else {
 	imgToLoad.src = "/images/site-logo.png";

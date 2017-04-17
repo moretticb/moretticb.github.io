@@ -40,7 +40,7 @@ An MLP, during training, should perform mapping of regions in the RGB color spac
 
 Multi-Layer Perceptron is a feedforward architecture of ANNs, having an input (non-neural) layer, hidden layers and an output layer. This network is trained by backpropagation algorithm, performing supervised learning (learning by examples).
 
-Topology configuration (i.e., size of each layer) are defined according to a specific problem to be worked on. For this color sensor, as illustrated below, the neural network receives 3 inputs (RGB values), having one hidden layer with 6 neurons and an output layer with 10 neurons - just recalling: the output layer must have the same number of classes (colors, in this case), for a binarized output. Hidden-layer sizes are empirically obtained, stablishing ranges of values to train and find potentially good results (this can be a bit difficult and slow sometimes).
+Topology configuration (i.e., size of each layer) are defined according to a specific problem to be worked on. For this color sensor, as illustrated below, the neural network receives 3 inputs (RGB values), having one hidden layer with 6 neurons and an output layer with 10 neurons - just recalling: the output layer must have the same number of classes (colors, in this case), for a binarized output. Hidden-layer sizes are empirically obtained, establishing ranges of values to train and find potentially good results (this can be a bit difficult and slow sometimes).
 
 <iframe width="600" height="560" src="/mlpcmdgen/index.html#3,6,10,-1" style="max-width: 600px; width: 100%;" frameborder="0"></iframe>
 
@@ -100,7 +100,7 @@ For calibration and recognition, the color sensor executes three iterations, onc
 
 Concerning calibration, the iterative process mentioned above is performed twice: once for black color and once for white color. Ax explained in [Color theory](#color-theory), this is for the detection of maximum and minimum - initially from *near zero* to *near 1024*, according to the reading resolution - reflections of red, green and blue lights, obtaining a true range to properly rescale to intervals \\( [0,255] \\) (for informative purpose) and \\( [0,1] \\) (the actual input to feed the neural network).
 
-The waiting time to stablish reading of the light sensor can vary acording to each electronic component, so it is good to give a good delay to ensure a steady sensing. In my case, I gave a 500-millisecond delay, but it is worth to initially use a bigger value and then decreasing it until the verge of a non steady behavior.
+The waiting time to establish reading of the light sensor can vary according to each electronic component, so it is good to give a good delay to ensure a steady sensing. In my case, I gave a 500-millisecond delay, but it is worth to initially use a bigger value and then decreasing it until the verge of a non steady behavior.
 
 In detection, the collected RGB values - ranging from 0 to 1 - feed an MLP, performing the actual color recognition. For the MLP running in Arduino, I am using [Neurona][NeuronaDocs]{:target="_blank"} - a library I wrote to easily use ANNs in arduino. Check also [this post][NeuronaPost] for more details; for training MLPs, I am using [an implementation][MLPLink] in C language (training and operation modes), giving the adjusted weights to use with Neurona. Still regarding training, it was used \\( \alpha=0.8 \\), \\( \eta=0.1 \\) and \\( \epsilon=10^{-7} \\).
 

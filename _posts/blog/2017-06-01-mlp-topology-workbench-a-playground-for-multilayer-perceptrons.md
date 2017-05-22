@@ -29,7 +29,7 @@ Open the [tool][MTWTool]{:target="_blank"} in a new window or use the embedded v
 * Sections
 {:toc}
 
-<iframe width="600" height="560" src="http://www.moretticb.com/MTW/embed.html" style="max-width: 600px; width: 100%; height: 568px;" frameborder="0"></iframe>
+<iframe width="600" height="560" src="http://www.moretticb.com/MTW/Tool/embed.html" style="max-width: 600px; width: 100%; height: 568px;" frameborder="0"></iframe>
 
 
 ## Topology tab

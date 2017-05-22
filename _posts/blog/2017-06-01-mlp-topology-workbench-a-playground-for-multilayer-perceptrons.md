@@ -144,7 +144,7 @@ where:
 
 
 ### Training interface
-At the bottom area, the adjustable parameters of the classic backpropagation algorithm are learning rate ( \\( \eta \\) ) and precision ( \(( \epsilon \\) ) as stopping criterion. Once parameters are changed, hit **update parameters** button.
+At the bottom area, the adjustable parameters of the classic backpropagation algorithm are learning rate ( \\( \eta \\) ) and precision ( \\( \epsilon \\) ) as stopping criterion. Once parameters are changed, hit **update parameters** button.
 
 To start training, hit **iterate** button. everything in the structure is updated at each iteration, and the behavior of the mean square error (MSE) along epochs can be inspected by the vertical gauge at the right. As MSE approaches \\( \epsilon \\), if the convergence slows down and the difference is too small to inspect visually, click the gauge area to zoom in.
 
@@ -166,14 +166,14 @@ The other way around is also possible. A list of weights obtained elsewhere - a 
 
 The **feed forward** button is used when the output or activations of hidden neurons are not refreshed.
 
-Depending of the topological configuration, the <img src="/images/MTWNeuron.png" style="width: 35px; height: 35px;" /> becomes available. More details of this feature are covered in next section.
+Depending of the topological configuration, the <img src="/images/MTWNeuron.png" style="width: 35px; height: 35px;" /> button becomes available. More details of this feature are covered in next section.
 
 
 
 ## Visualize tab
 When the topology defines a function in \\( \mathbb{R}^2 \\) or \\( \mathbb{R}^3 \\), this tab (`Shift+4`) is enabled and ready to use. It shares the same [training interface](#training-interface) as in training tab - so the result of iterations can be observed spatially - along with visualization parameters to customize what is shown in the top area.
 
-The size of points (from [dataset](#dataset)) to be plotted is defined by **PT SIZE** and **ASPECT** defines the [aspect ratio][AspectRatio]{:target="_blank"} of the plotting area. **show points** flags whether to show the points along with the output of the model. Once a parameter is changed, **plot** button will be marked, meaning that there are changes to be done in the visualization. Hit **plot** button to refresh the plotting area with the new parameters.
+The size of points (from [dataset](#dataset)) to be plotted is defined by **PT SIZE** and **ASPECT** defines the [aspect ratio][AspectRatio]{:target="_blank"} of the plotting area. **show points** button flags whether to show the points along with the output of the model. Once a parameter is changed, **plot** button will be marked, meaning that there are changes to be done in the visualization. Hit **plot** button to refresh the plotting area with the new parameters.
 
 The default node to be visualized is the model output (i.e., the first node of the output layer). To select another node for visualization, hit <img src="/images/MTWNeuron.png" style="width: 35px; height: 35px;" /> button (also available in training tab, or `Shift+V`, regardless of the selected tab). It will take to the [training tab](#training-tab), prompting to select another node to visualize its output in space - pass the mouse cursor over a node to see a preview of the visualization, or click to be taken to the visualize tab.
 

@@ -18,7 +18,7 @@ For study purposes, I developed this tool as an additional material to be used a
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/PaF6JXLaHFE" frameborder="0"> </iframe>
 
-I took the idea of playground from [Tensorflow's playground][TFPlayground]{:target="_blank"}, since the you are free to play with multilayer perceptrons from this tool. In fact, I encourage you to make your own! It is quite a good way to explore your expertise from different perspectives. Have fun!
+I took the idea of a playground from [Tensorflow's playground][TFPlayground]{:target="_blank"}, since the you are free to play with multilayer perceptrons from this tool. In fact, I encourage you to make your own! It is quite a good way to explore your expertise from different perspectives. Have fun!
 
 This project was developed in JavaScript, HTML and CSS and encompasses the implementation of the classic backpropagation training algorithm. It is entirely available at [GitHub][MTWGH]{:target="_blank"}. In case you feel like adding new features and adjusting it to your needs, [fork me on GitHub][MTWGH]{:target="_blank"} :).
 

@@ -16,7 +16,7 @@ When it comes to neural networks, or more specifically multi-layer perceptrons, 
 
 For study purposes, I developed this tool as an additional material to be used along with contents of the literature, enabling to recreate a particular state of the network in order to inspect its behavior as a function, as well as its convergence during training, and (almost) everything else that can be studied. See in the video below an overview of this project:
 
-<iframe width="560" height="315" src="//www.youtube.com/watch?v=PaF6JXLaHFE" frameborder="0"> </iframe>
+<iframe width="560" height="315" src="//www.youtube.com/embed/PaF6JXLaHFE" frameborder="0"> </iframe>
 
 I took the idea of playground from [Tensorflow's playground][TFPlayground]{:target="_blank"}, since the you are free to play with multilayer perceptrons from this tool. In fact, I encourage you to make your own! It is quite a good way to explore your expertise from different perspectives. Have fun!
 

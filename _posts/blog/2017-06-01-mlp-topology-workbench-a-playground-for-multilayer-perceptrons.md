@@ -213,7 +213,7 @@ where:
 	
 
 ## Closing remarks
-The purpose of this tool is to study how this architecture of neural networks and the classic backpropagation algorithm work, as well as to share a trained model. It has a lot of limitations and therefore several ways to increment and improve this tool. Again, [fork me on GitHub][MTWGH]{:target="_blank"} if you are keen on neural networks and this tool.
+The purpose of this tool is to study how this architecture of neural networks and the classic backpropagation algorithm work, as well as to share a trained model. It has a lot of limitations and therefore plenty of room for improvements. Again, [fork me on GitHub][MTWGH]{:target="_blank"} if you are keen on neural networks and this tool.
 
 This is **not** a data science tool - Cross-validation and preprocessing tools were intentionally not implemented, because they do not concern the main purpose. For real-life applications, [Tensorflow library][TFLibrary]{:target="_blank"}, [Python + Scikit-learn][SKLearn]{:target="_blank"} and [R][RProject]{:target="_blank"} are the most suitable tools.
 

@@ -89,9 +89,9 @@ where:
 
 Runtime verbose may guide the user for inserting weights and network inputs in order to obtain the due output.
 
-You can also use a workbench-like [tool][workbench]{:target="_blank"} I am developing in order to visually build the training mode command:
+You can also use the [MLP Topology Workbench][MTWTool]{:target="_blank"} either to generate commands to run the compiled program in training and/or operation modes (command tab), or as an alternative tool for training and/or operation modes:
 
-<iframe width="600" height="560" src="/mlpcmdgen/index.html" style="max-width: 600px; width: 100%;" frameborder="0"></iframe>
+<iframe width="600" height="560" src="http://www.moretticb.com/MTW/Tool/embed.html" style="max-width: 600px; width: 100%; height: 568px;" frameborder="0"></iframe>
 
 ## Improvements
 
@@ -112,3 +112,4 @@ This implementation was focused only in algorithmic fidelity (didactic purposes)
 [livroRNA]: http://laips.sel.eesc.usp.br/livrorna/
 [workbench]: /mlpcmdgen
 [neuronaPost]: /blog/neurona-neural-networks-for-arduino/
+[MTWTool]: /MTW

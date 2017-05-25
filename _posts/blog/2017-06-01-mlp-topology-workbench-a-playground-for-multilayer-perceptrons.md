@@ -39,7 +39,7 @@ The number of inputs, hidden nodes and outputs are adjustable through <img src="
 
 The activation function used in each layer is indicated by \\( g(u) \\) or \\( u \\) (click to toggle between them), being respectively a sigmoid or a linear function:
 
-* \\( g(u) = \dfrac{1}{1+e^{-x}} \\)
+* \\( g(u) = \dfrac{1}{1+e^{-u}} \\)
 * \\( u = u \\)
 
 The configurations can be swapped between layers using the <img src="/images/MTWSwap.png" style="width: 35px; height: 35px;" /> button. In case of swapping with the input layer, only the number of nodes does swap and everything else remains in the neural layer.

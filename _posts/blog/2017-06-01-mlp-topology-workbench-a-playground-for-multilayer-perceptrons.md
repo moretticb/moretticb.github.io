@@ -12,7 +12,7 @@ image:
 date: 2017-05-22W23:59:55-04:00
 ---
 
-When it comes to neural networks, or more specifically multi-layer perceptrons, one can find in literature some contents which may be either complicated, demanding a bit of mathematical maturity, or too simplified, lacking details which would eventually come in handy for implementation, usage, or even understanding of the mechanism as a whole.
+When it comes to neural networks, or more specifically multi-layer perceptrons, one can find in literature some contents which may be either complicated, demanding a bit of mathematical maturity, or too simplified, lacking details which would come in handy for implementation, usage, or even understanding of the mechanism as a whole.
 
 For study purposes, I developed this tool as an additional material to be used along with contents of the literature, enabling to recreate a particular state of the network in order to inspect its behavior as a function, as well as its convergence during training, and (almost) everything else that can be studied. See in the video below an overview of this project:
 

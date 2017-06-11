@@ -8,6 +8,6 @@ image:
 ---
 
 |:---:|:---|
-| <img width="160px" src="/images/KDDRehab.png"> | [**Knowledge Discovery and Rehabilitation Robotics data**][KDDRehab] <br> Data Mining and Knowledge Discovery strategies over the performance of patients enrolled in physical rehabilitation programs, under the rehabilitation robotics paradigm. <br> [Read more][KDDRehab] - |
+| [<img width="160px" src="/images/KDDRehab.png">][KDDRehab] | [**Knowledge Discovery and Rehabilitation Robotics data**][KDDRehab] <br> Data Mining and Knowledge Discovery strategies over the performance of patients enrolled in physical rehabilitation programs, under the rehabilitation robotics paradigm. <br> - [Read more][KDDRehab] - |
 
-[KDDRehab]: /projects
+[KDDRehab]: /projects/KDDRehab/

@@ -34,8 +34,6 @@ Analysis approaches take place either at a restricted scope, within sessions, or
 
 A device called InMotion Arm, for the rehabilitation of upper limbs, was used to collected data describing the performance of eight male and eight female patients diagnosed with left or right hemiparesis. No data regarding non-paretic sides were considered. It is important to point out that the identity of patients were preserved and the interactions, be human or robotic, comply to requirements of an ethics committee.
 
-This method is based on a Model of Knowledge Discovery in Databases.
-
 This is the game running in the robotic device. Displaying eight targets arranged around the edge, and a central target, the goal is to perform reaching movements towards the indicated target and the whole cycle of movements traces a star-like pattern.
 
 A single file represents a single reaching movement. Each movement is represented by time offsets, positions, velocities and forces being collected at 200Hz.

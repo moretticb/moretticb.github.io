@@ -12,7 +12,7 @@ image:
 date: 2019-11-25W23:59:55-04:00
 ---
 
-After quite a while without a post here, I decided to come back. It has been hard to find some time for my personal projects, but my current situation led me to make this post. I'm currently a visiting PhD student at MIT and I was asked to talk about neural networks with the members of [The 77 Lab](http://the77lab.mit.edu), so I came up with this (long) material.
+After quite a while without a post here, I decided to come back. It has been hard to find some time for my personal projects, but my current situation led me to make this post. I'm currently a visiting PhD student at MIT and I was asked to talk about neural networks with the members of [The 77 Lab](http://the77lab.mit.edu){:target="_blank"}, so I came up with this (long) material.
 
 As an introduction to artificial neural networks and applications, this overview traces the whole path from one of the building blocks of artificial neural networks and then goes towards LSTMs. Check the video below.
 

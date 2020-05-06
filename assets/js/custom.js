@@ -5,9 +5,9 @@ var doodleDates = [
 	[{b:10,e:17,name:"easter"}], //4
 	[], //5
 	[{b:1,e:30,name:"arraia"}], //6
-	[], //7
-	[], //8
-	[{b:7,e:7,name:"7set"},{b:9,e:9,name:"donosmi"}], //9
+	[{b:4,e:4,name:"usa"}], //7
+	[{b:31,e:31,name:"usa"}], //8
+	[{b:2,e:2,name:"mit"},{b:7,e:7,name:"7set"},{b:9,e:9,name:"donosmi"}], //9
 	[], //10
 	[], //11
 	[{b:1,e:26,name:"xmas"},{b:27,e:31,name:"newyear"}] //12

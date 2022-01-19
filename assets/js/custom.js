@@ -1,5 +1,3 @@
-// DOODLE
-
 var doodleDates = [
 	[{b:1,e:1,name:"newyear"}], //1
 	[{b:20,e:29,name:"carnival"}], //2
@@ -37,25 +35,20 @@ function checkDoodle(){
 	doodleImg.src = imgToLoad.src;
 }
 
-// end of DOODLE
 
 
+var coverImgToLoad = new Image(10,10);
+if(window.location.href.indexOf("about") > -1){
+	var aboutCapa = 3;
+	coverImgToLoad.src = "/images/aboutCapa"+(Math.round(Math.random()*(aboutCapa-1))+1)+".jpg";
+}
 
-
-// ABOUT PAGE MODS
-
-if(window.onload){
-} else {
-	window.onload = function(){
-		var aboutCapa = 3;
-		if(window.location.href.indexOf("about") > -1){
-			var imgs = document.getElementsByTagName("img");
-			var idx = 0;
-			while(imgs[idx].src.indexOf("aboutCapa") < 0){idx++};
-			imgs[idx].src="/images/aboutCapa"+(Math.round(Math.random()*(aboutCapa-1))+1)+".jpg";
-		}
+function checkPageCover(){
+	if(window.location.href.indexOf("about") > -1){
+		document.getElementById("pagecover").src = coverImgToLoad.src;
 	}
 }
 
 
-// end of ABOUT PAGE MODS
+
+

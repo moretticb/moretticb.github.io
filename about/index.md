@@ -12,7 +12,7 @@ From Piracicaba, São Paulo, Brazil and passionate about computers, [music][Cafo
 ## Education
 
 |:---:|:---|
-| <img width="160px" src="/images/logo_mit.png"> | **Massachusetts Institute of Technology (MIT)** <br> Research internship as a PhDstudent <br> 2019-2020 |
+| <img width="160px" src="/images/logo_mit.png"> | **Massachusetts Institute of Technology (MIT)** <br> Research internship as a PhD student <br> 2019-2020 |
 |     |    |
 | <img width="160px" src="/images/logo_icmc.png"> | **Instituto de Ciências Matemáticas e de Computação (ICMC-USP)** <br> PhD in Computer Science and Computational Mathematics <br> [PhD thesis][PhDThesisLink]{:target="_blank"} <br> 2016-2021 |
 |     |    |

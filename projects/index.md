@@ -8,7 +8,7 @@ image:
 ---
 
 |:---:|:---|
-| [<img width="160px" src="/images/KDDRehab.png">][KDDRehab] | [**Knowledge Discovery and Rehabilitation Robotics data**][KDDRehab] (2014 - )<br> Data Mining and Knowledge Discovery strategies over the performance of patients enrolled in physical rehabilitation programs, under the rehabilitation robotics paradigm. <br> - [Read more][KDDRehab] - |
+| [<img width="160px" src="/images/KDDRehab.png">][KDDRehab] | [**Knowledge Discovery and Rehabilitation Robotics data**][KDDRehab] (2014 - 2021)<br> Data Mining and Knowledge Discovery strategies over the performance of patients enrolled in physical rehabilitation programs, under the rehabilitation robotics paradigm. <br> - [Read more][KDDRehab] - |
 | &nbsp; | &nbsp; |
 | [<img width="160px" src="/jsplus/images/logo.png">][jsplus] | [**JS+**][jsplus] (2013)<br> General purpose javascript library as an alternative in a non-HTML5 context. It encompasses basic useful resources in order to build games, web applications, components and several other tools, ensuring an awesome user-experience. <br> - [Read more][jsplus] - |
 | &nbsp; | &nbsp; |

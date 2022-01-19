@@ -52,7 +52,7 @@ if(window.onload){
 			var imgs = document.getElementsByTagName("img");
 			var idx = 0;
 			while(imgs[idx].src.indexOf("aboutCapa") < 0){idx++};
-			imgs[idx].src="/images/aboutCapa"+Math.round(Math.random()*aboutCapa)+".png";
+			imgs[idx].src="/images/aboutCapa"+(Math.round(Math.random()*(aboutCapa-1))+1)+".jpg";
 		}
 	}
 }

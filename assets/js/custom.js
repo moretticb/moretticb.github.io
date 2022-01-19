@@ -44,13 +44,17 @@ function checkDoodle(){
 
 // ABOUT PAGE MODS
 
-var aboutCapa = 3;
-
-if(window.location.href.indexOf("about") > -1){
-	var imgs = document.getElementsByTagName("img");
-	var idx = 0;
-	while(imgs[idx].src.indexOf("aboutCapa") < 0){idx++};
-	imgs[idx].src="/images/aboutCapa"+Math.round(Math.random()*aboutCapa)+".png";
+if(window.onload){
+} else {
+	window.onload = function(){
+		var aboutCapa = 3;
+		if(window.location.href.indexOf("about") > -1){
+			var imgs = document.getElementsByTagName("img");
+			var idx = 0;
+			while(imgs[idx].src.indexOf("aboutCapa") < 0){idx++};
+			imgs[idx].src="/images/aboutCapa"+Math.round(Math.random()*aboutCapa)+".png";
+		}
+	}
 }
 
 

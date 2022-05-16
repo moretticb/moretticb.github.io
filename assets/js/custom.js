@@ -17,11 +17,10 @@ var imgToLoad = new Image(10,10);
 if(getDoodleName()){
 	var doodle_name = getDoodleName();
 	if(doodle_name.indexOf("_")>0){
-		eval(doodle_name+"init()");
-	} else {
-		standard_init();
-		imgToLoad.src = "/images/site-logo-"+getDoodleName()+".png";
+		doodle_name = doodle_name.split("_").join();
 	}
+
+	imgToLoad.src = "/images/site-logo-"+getDoodleName()+".png";
 } else {
 	imgToLoad.src = "/images/site-logo.png";
 }
@@ -37,6 +36,13 @@ function getDoodleName(){
 }
 
 function checkDoodle(){
+	var doodle_name = getDoodleName();
+	if(doodle_name.indexOf("_")>0){
+		eval(doodle_name+"init()");
+		return;
+	}
+
+	standard_init();
 	var doodleImg = document.getElementById("doodle");
 	doodleImg.src = imgToLoad.src;
 }
@@ -74,6 +80,8 @@ function epicycles_init(){
 	doodle_dom.outerHTML = '<div style="display:inline-block; background-repeat: no-repeat; width: 200px; height:200px;" id="doodle" class="animated fadeInDown"></div>';
 	doodle_dom = document.getElementById("doodle");
 	doodle_dom.style.backgroundImage = "url('/images/site-logo-epicycles.png')";
+	doodle_dom.style.backgroundImage = "auto "+(5*doodle_dom.offsetHeight)+"px";
+
 
 	window.onmousemove = function(evt){
 		var tile_cols = 55;

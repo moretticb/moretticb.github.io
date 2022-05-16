@@ -37,7 +37,7 @@ function getDoodleName(){
 
 function checkDoodle(){
 	var doodle_name = getDoodleName();
-	if(doodle_name.indexOf("_")>0){
+	if(doodle_name && doodle_name.indexOf("_")>0){
 		eval(doodle_name+"init()");
 		return;
 	}
@@ -72,6 +72,8 @@ function standard_init(){
 	if(doodle_dom.tagName != "IMG"){
 		doodle_dom.outerHTML = '<img src="http://www.moretticb.com/images/site-logo.png" id="doodle" alt="Caio Benatti Moretti logo" class="animated fadeInDown" width="200" height="200">';
 	}
+	doodle_dom.parentElement.href = "http://www.moretticb.com/";
+	doodle_dom.parentElement.target = "";
 	window.onmousemove=null;
 }
 
@@ -80,8 +82,10 @@ function epicycles_init(){
 	doodle_dom.outerHTML = '<div style="display:inline-block; background-repeat: no-repeat; width: 200px; height:200px;" id="doodle" class="animated fadeInDown"></div>';
 	doodle_dom = document.getElementById("doodle");
 	doodle_dom.style.backgroundImage = "url('/images/site-logo-epicycles.png')";
-	doodle_dom.style.backgroundImage = "auto "+(5*doodle_dom.offsetHeight)+"px";
+	doodle_dom.style.backgroundSize = "auto "+(5*doodle_dom.offsetHeight)+"px";
 
+	doodle_dom.parentElement.href = "https://www.desmos.com/calculator/ga5d0wzlhl";
+	doodle_dom.parentElement.target = "_blank";
 
 	window.onmousemove = function(evt){
 		var tile_cols = 55;

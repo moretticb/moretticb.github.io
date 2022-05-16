@@ -3,7 +3,7 @@ var doodleDates = [
 	[{b:20,e:29,name:"carnival"}], //2
 	[{b:1,e:1,name:"carnival"}], //3
 	[{b:10,e:17,name:"easter"}], //4
-	[], //5
+	[{b:28,e:28,name:"epicycles_"}], //5
 	[{b:1,e:30,name:"arraia"}], //6
 	[{b:4,e:4,name:"usa"}], //7
 	[{b:31,e:31,name:"usa"}], //8
@@ -15,7 +15,13 @@ var doodleDates = [
 
 var imgToLoad = new Image(10,10);
 if(getDoodleName()){
-	imgToLoad.src = "/images/site-logo-"+getDoodleName()+".png";
+	var doodle_name = getDoodleName();
+	if(doodle_name.indexOf("_")>0){
+		eval(doodle_name+"init()");
+	} else {
+		standard_init();
+		imgToLoad.src = "/images/site-logo-"+getDoodleName()+".png";
+	}
 } else {
 	imgToLoad.src = "/images/site-logo.png";
 }
@@ -52,3 +58,34 @@ function checkPageCover(){
 
 
 
+
+/****** interactive doodle functions *****/
+
+function standard_init(){
+	var doodle_dom = document.getElementById("doodle");
+	if(doodle_dom.tagName != "IMG"){
+		doodle_dom.outerHTML = '<img src="http://www.moretticb.com/images/site-logo.png" id="doodle" alt="Caio Benatti Moretti logo" class="animated fadeInDown" width="200" height="200">';
+	}
+	window.onmousemove=null;
+}
+
+function epicycles_init(){
+	var doodle_dom = document.getElementById("doodle");
+	doodle_dom.outerHTML = '<div style="display:inline-block; background-color: #0f0;" id="doodle" class="animated fadeInDown" width="200" height="200">';
+	doodle_dom = document.getElementById("doodle");
+	doodle_dom.style.backgroundImage = "url('//images/site-logo-epicycles.png')";
+
+	window.onmousemove = function(evt){
+		var tile_cols = 55;
+		var tile_rows = 5;
+		var frame_dim = doodle_dom.offsetWidth;
+		var perc_xy = [evt.clientX/window.innerWidth, evt.clientY/window.innerHeight];
+		var col = Math.floor(perc_xy[0]*tile_cols);
+		var row = Math.floor(perc_xy[1]*tile_rows);
+		
+		if(doodle_dom.style.backgroundImage){
+			doodle_dom.style.backgroundPosition = (-col*frame_dim)+"px "+(-row*frame_dim)+"px";
+		}
+	}
+
+}

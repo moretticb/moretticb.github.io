@@ -71,9 +71,9 @@ function standard_init(){
 
 function epicycles_init(){
 	var doodle_dom = document.getElementById("doodle");
-	doodle_dom.outerHTML = '<div style="display:inline-block; background-color: #0f0;" id="doodle" class="animated fadeInDown" width="200" height="200">';
+	doodle_dom.outerHTML = '<div style="display:inline-block; background-repeat: no-repeat; width: 200px; height:200px;" id="doodle" class="animated fadeInDown"></div>';
 	doodle_dom = document.getElementById("doodle");
-	doodle_dom.style.backgroundImage = "url('//images/site-logo-epicycles.png')";
+	doodle_dom.style.backgroundImage = "url('/images/site-logo-epicycles.png')";
 
 	window.onmousemove = function(evt){
 		var tile_cols = 55;

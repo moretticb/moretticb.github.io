@@ -29,7 +29,7 @@ Open the [tool][MTWTool]{:target="_blank"} in a new window or use the embedded v
 * Sections
 {:toc}
 
-<iframe width="600" height="560" src="http://www.moretticb.com/MTW/Tool/embed.html" style="max-width: 600px; width: 100%; height: 568px;" frameborder="0"></iframe>
+<iframe width="600" height="560" src="https://www.moretticb.com/MTW/Tool/embed.html" style="max-width: 600px; width: 100%; height: 568px;" frameborder="0"></iframe>
 
 
 ## Topology tab
@@ -222,7 +222,7 @@ This is **not** a data science tool - Cross-validation and preprocessing tools w
 [SKLearn]: http://scikit-learn.org/
 [RProject]: https://www.r-project.org/
 [MTWGH]: http://www.github.com/moretticb/MTW
-[MTWTool]: http://www.moretticb.com/MTW
+[MTWTool]: https://www.moretticb.com/MTW
 [CMLP]: /blog/multilayer-perceptron-implementation-in-c/
 [CSVWiki]: https://pt.wikipedia.org/wiki/Comma-separated_values
 [BinClassifWiki]: https://en.wikipedia.org/wiki/Binary_classification
